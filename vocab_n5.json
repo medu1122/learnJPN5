@@ -1,0 +1,3481 @@
+[
+  {
+    "id": 1,
+    "kanji": "今日",
+    "reading": "きょう",
+    "meaning": "hôm nay",
+    "category": "Thời gian"
+  },
+  {
+    "id": 2,
+    "kanji": "明日",
+    "reading": "あした",
+    "meaning": "ngày mai",
+    "category": "Thời gian"
+  },
+  {
+    "id": 3,
+    "kanji": "昨日",
+    "reading": "きのう",
+    "meaning": "hôm qua",
+    "category": "Thời gian"
+  },
+  {
+    "id": 4,
+    "kanji": "今",
+    "reading": "いま",
+    "meaning": "bây giờ",
+    "category": "Thời gian"
+  },
+  {
+    "id": 5,
+    "kanji": "今朝",
+    "reading": "けさ",
+    "meaning": "sáng nay",
+    "category": "Thời gian"
+  },
+  {
+    "id": 6,
+    "kanji": "今晩",
+    "reading": "こんばん",
+    "meaning": "tối nay",
+    "category": "Thời gian"
+  },
+  {
+    "id": 7,
+    "kanji": "毎日",
+    "reading": "まいにち",
+    "meaning": "hằng ngày",
+    "category": "Thời gian"
+  },
+  {
+    "id": 8,
+    "kanji": "毎朝",
+    "reading": "まいあさ",
+    "meaning": "mỗi sáng",
+    "category": "Thời gian"
+  },
+  {
+    "id": 9,
+    "kanji": "毎晩",
+    "reading": "まいばん",
+    "meaning": "mỗi tối",
+    "category": "Thời gian"
+  },
+  {
+    "id": 10,
+    "kanji": "毎週",
+    "reading": "まいしゅう",
+    "meaning": "mỗi tuần",
+    "category": "Thời gian"
+  },
+  {
+    "id": 11,
+    "kanji": "毎月",
+    "reading": "まいつき",
+    "meaning": "hằng tháng",
+    "category": "Thời gian"
+  },
+  {
+    "id": 12,
+    "kanji": "毎年",
+    "reading": "まいとし",
+    "meaning": "hằng năm",
+    "category": "Thời gian"
+  },
+  {
+    "id": 13,
+    "kanji": "朝",
+    "reading": "あさ",
+    "meaning": "buổi sáng",
+    "category": "Thời gian"
+  },
+  {
+    "id": 14,
+    "kanji": "昼",
+    "reading": "ひる",
+    "meaning": "buổi trưa",
+    "category": "Thời gian"
+  },
+  {
+    "id": 15,
+    "kanji": "夜",
+    "reading": "よる",
+    "meaning": "buổi tối",
+    "category": "Thời gian"
+  },
+  {
+    "id": 16,
+    "kanji": "午前",
+    "reading": "ごぜん",
+    "meaning": "buổi sáng (AM)",
+    "category": "Thời gian"
+  },
+  {
+    "id": 17,
+    "kanji": "午後",
+    "reading": "ごご",
+    "meaning": "buổi chiều (PM)",
+    "category": "Thời gian"
+  },
+  {
+    "id": 18,
+    "kanji": "時間",
+    "reading": "じかん",
+    "meaning": "thời gian",
+    "category": "Thời gian"
+  },
+  {
+    "id": 19,
+    "kanji": "分",
+    "reading": "ふん・ぷん",
+    "meaning": "phút",
+    "category": "Thời gian"
+  },
+  {
+    "id": 20,
+    "kanji": "秒",
+    "reading": "びょう",
+    "meaning": "giây",
+    "category": "Thời gian"
+  },
+  {
+    "id": 21,
+    "kanji": "週",
+    "reading": "しゅう",
+    "meaning": "tuần",
+    "category": "Thời gian"
+  },
+  {
+    "id": 22,
+    "kanji": "先週",
+    "reading": "せんしゅう",
+    "meaning": "tuần trước",
+    "category": "Thời gian"
+  },
+  {
+    "id": 23,
+    "kanji": "来週",
+    "reading": "らいしゅう",
+    "meaning": "tuần sau",
+    "category": "Thời gian"
+  },
+  {
+    "id": 24,
+    "kanji": "今週",
+    "reading": "こんしゅう",
+    "meaning": "tuần này",
+    "category": "Thời gian"
+  },
+  {
+    "id": 25,
+    "kanji": "先月",
+    "reading": "せんげつ",
+    "meaning": "tháng trước",
+    "category": "Thời gian"
+  },
+  {
+    "id": 26,
+    "kanji": "来月",
+    "reading": "らいげつ",
+    "meaning": "tháng sau",
+    "category": "Thời gian"
+  },
+  {
+    "id": 27,
+    "kanji": "今月",
+    "reading": "こんげつ",
+    "meaning": "tháng này",
+    "category": "Thời gian"
+  },
+  {
+    "id": 28,
+    "kanji": "去年",
+    "reading": "きょねん",
+    "meaning": "năm ngoái",
+    "category": "Thời gian"
+  },
+  {
+    "id": 29,
+    "kanji": "来年",
+    "reading": "らいねん",
+    "meaning": "năm sau",
+    "category": "Thời gian"
+  },
+  {
+    "id": 30,
+    "kanji": "今年",
+    "reading": "ことし",
+    "meaning": "năm nay",
+    "category": "Thời gian"
+  },
+  {
+    "id": 31,
+    "kanji": "日",
+    "reading": "ひ",
+    "meaning": "ngày",
+    "category": "Thời gian"
+  },
+  {
+    "id": 32,
+    "kanji": "月",
+    "reading": "つき",
+    "meaning": "tháng, mặt trăng",
+    "category": "Thời gian"
+  },
+  {
+    "id": 33,
+    "kanji": "年",
+    "reading": "とし",
+    "meaning": "năm, tuổi",
+    "category": "Thời gian"
+  },
+  {
+    "id": 34,
+    "kanji": "週間",
+    "reading": "しゅうかん",
+    "meaning": "(khoảng) tuần",
+    "category": "Thời gian"
+  },
+  {
+    "id": 35,
+    "kanji": "誕生日",
+    "reading": "たんじょうび",
+    "meaning": "sinh nhật",
+    "category": "Thời gian"
+  },
+  {
+    "id": 36,
+    "kanji": "休み",
+    "reading": "やすみ",
+    "meaning": "kỳ nghỉ, ngày nghỉ",
+    "category": "Thời gian"
+  },
+  {
+    "id": 37,
+    "kanji": "月曜日",
+    "reading": "げつようび",
+    "meaning": "thứ Hai",
+    "category": "Thời gian"
+  },
+  {
+    "id": 38,
+    "kanji": "火曜日",
+    "reading": "かようび",
+    "meaning": "thứ Ba",
+    "category": "Thời gian"
+  },
+  {
+    "id": 39,
+    "kanji": "水曜日",
+    "reading": "すいようび",
+    "meaning": "thứ Tư",
+    "category": "Thời gian"
+  },
+  {
+    "id": 40,
+    "kanji": "木曜日",
+    "reading": "もくようび",
+    "meaning": "thứ Năm",
+    "category": "Thời gian"
+  },
+  {
+    "id": 41,
+    "kanji": "金曜日",
+    "reading": "きんようび",
+    "meaning": "thứ Sáu",
+    "category": "Thời gian"
+  },
+  {
+    "id": 42,
+    "kanji": "土曜日",
+    "reading": "どようび",
+    "meaning": "thứ Bảy",
+    "category": "Thời gian"
+  },
+  {
+    "id": 43,
+    "kanji": "日曜日",
+    "reading": "にちようび",
+    "meaning": "Chủ Nhật",
+    "category": "Thời gian"
+  },
+  {
+    "id": 44,
+    "kanji": "家族",
+    "reading": "かぞく",
+    "meaning": "gia đình",
+    "category": "Gia đình"
+  },
+  {
+    "id": 45,
+    "kanji": "両親",
+    "reading": "りょうしん",
+    "meaning": "cha mẹ",
+    "category": "Gia đình"
+  },
+  {
+    "id": 46,
+    "kanji": "父",
+    "reading": "ちち",
+    "meaning": "bố (của mình)",
+    "category": "Gia đình"
+  },
+  {
+    "id": 47,
+    "kanji": "母",
+    "reading": "はは",
+    "meaning": "mẹ (của mình)",
+    "category": "Gia đình"
+  },
+  {
+    "id": 48,
+    "kanji": "お父さん",
+    "reading": "おとうさん",
+    "meaning": "bố (người khác/gọi)",
+    "category": "Gia đình"
+  },
+  {
+    "id": 49,
+    "kanji": "お母さん",
+    "reading": "おかあさん",
+    "meaning": "mẹ (người khác/gọi)",
+    "category": "Gia đình"
+  },
+  {
+    "id": 50,
+    "kanji": "兄",
+    "reading": "あに",
+    "meaning": "anh trai (của mình)",
+    "category": "Gia đình"
+  },
+  {
+    "id": 51,
+    "kanji": "姉",
+    "reading": "あね",
+    "meaning": "chị gái (của mình)",
+    "category": "Gia đình"
+  },
+  {
+    "id": 52,
+    "kanji": "弟",
+    "reading": "おとうと",
+    "meaning": "em trai",
+    "category": "Gia đình"
+  },
+  {
+    "id": 53,
+    "kanji": "妹",
+    "reading": "いもうと",
+    "meaning": "em gái",
+    "category": "Gia đình"
+  },
+  {
+    "id": 54,
+    "kanji": "お兄さん",
+    "reading": "おにいさん",
+    "meaning": "anh trai (người khác)",
+    "category": "Gia đình"
+  },
+  {
+    "id": 55,
+    "kanji": "お姉さん",
+    "reading": "おねえさん",
+    "meaning": "chị gái (người khác)",
+    "category": "Gia đình"
+  },
+  {
+    "id": 56,
+    "kanji": "兄弟",
+    "reading": "きょうだい",
+    "meaning": "anh chị em",
+    "category": "Gia đình"
+  },
+  {
+    "id": 57,
+    "kanji": "子供",
+    "reading": "こども",
+    "meaning": "trẻ con, con cái",
+    "category": "Gia đình"
+  },
+  {
+    "id": 58,
+    "kanji": "赤ちゃん",
+    "reading": "あかちゃん",
+    "meaning": "em bé",
+    "category": "Gia đình"
+  },
+  {
+    "id": 59,
+    "kanji": "祖父",
+    "reading": "そふ",
+    "meaning": "ông",
+    "category": "Gia đình"
+  },
+  {
+    "id": 60,
+    "kanji": "祖母",
+    "reading": "そぼ",
+    "meaning": "bà",
+    "category": "Gia đình"
+  },
+  {
+    "id": 61,
+    "kanji": "おじいさん",
+    "reading": "おじいさん",
+    "meaning": "ông (gọi)",
+    "category": "Gia đình"
+  },
+  {
+    "id": 62,
+    "kanji": "おばあさん",
+    "reading": "おばあさん",
+    "meaning": "bà (gọi)",
+    "category": "Gia đình"
+  },
+  {
+    "id": 63,
+    "kanji": "夫",
+    "reading": "おっと",
+    "meaning": "chồng",
+    "category": "Gia đình"
+  },
+  {
+    "id": 64,
+    "kanji": "妻",
+    "reading": "つま",
+    "meaning": "vợ",
+    "category": "Gia đình"
+  },
+  {
+    "id": 65,
+    "kanji": "息子",
+    "reading": "むすこ",
+    "meaning": "con trai",
+    "category": "Gia đình"
+  },
+  {
+    "id": 66,
+    "kanji": "娘",
+    "reading": "むすめ",
+    "meaning": "con gái",
+    "category": "Gia đình"
+  },
+  {
+    "id": 67,
+    "kanji": "家内",
+    "reading": "かない",
+    "meaning": "vợ (khiêm nhường)",
+    "category": "Gia đình"
+  },
+  {
+    "id": 68,
+    "kanji": "主人",
+    "reading": "しゅじん",
+    "meaning": "chồng (khiêm nhường)",
+    "category": "Gia đình"
+  },
+  {
+    "id": 69,
+    "kanji": "親",
+    "reading": "おや",
+    "meaning": "cha mẹ, bố mẹ",
+    "category": "Gia đình"
+  },
+  {
+    "id": 70,
+    "kanji": "人",
+    "reading": "ひと",
+    "meaning": "người",
+    "category": "Người"
+  },
+  {
+    "id": 71,
+    "kanji": "男",
+    "reading": "おとこ",
+    "meaning": "đàn ông",
+    "category": "Người"
+  },
+  {
+    "id": 72,
+    "kanji": "女",
+    "reading": "おんな",
+    "meaning": "phụ nữ",
+    "category": "Người"
+  },
+  {
+    "id": 73,
+    "kanji": "男の子",
+    "reading": "おとこのこ",
+    "meaning": "con trai (bé trai)",
+    "category": "Người"
+  },
+  {
+    "id": 74,
+    "kanji": "女の子",
+    "reading": "おんなのこ",
+    "meaning": "con gái (bé gái)",
+    "category": "Người"
+  },
+  {
+    "id": 75,
+    "kanji": "大人",
+    "reading": "おとな",
+    "meaning": "người lớn",
+    "category": "Người"
+  },
+  {
+    "id": 76,
+    "kanji": "友達",
+    "reading": "ともだち",
+    "meaning": "bạn bè",
+    "category": "Người"
+  },
+  {
+    "id": 77,
+    "kanji": "先生",
+    "reading": "せんせい",
+    "meaning": "giáo viên",
+    "category": "Người"
+  },
+  {
+    "id": 78,
+    "kanji": "学生",
+    "reading": "がくせい",
+    "meaning": "học sinh, sinh viên",
+    "category": "Người"
+  },
+  {
+    "id": 79,
+    "kanji": "医者",
+    "reading": "いしゃ",
+    "meaning": "bác sĩ",
+    "category": "Người"
+  },
+  {
+    "id": 80,
+    "kanji": "会社員",
+    "reading": "かいしゃいん",
+    "meaning": "nhân viên công ty",
+    "category": "Người"
+  },
+  {
+    "id": 81,
+    "kanji": "店員",
+    "reading": "てんいん",
+    "meaning": "nhân viên cửa hàng",
+    "category": "Người"
+  },
+  {
+    "id": 82,
+    "kanji": "外国人",
+    "reading": "がいこくじん",
+    "meaning": "người nước ngoài",
+    "category": "Người"
+  },
+  {
+    "id": 83,
+    "kanji": "お客さん",
+    "reading": "おきゃくさん",
+    "meaning": "khách hàng",
+    "category": "Người"
+  },
+  {
+    "id": 84,
+    "kanji": "学校",
+    "reading": "がっこう",
+    "meaning": "trường học",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 85,
+    "kanji": "会社",
+    "reading": "かいしゃ",
+    "meaning": "công ty",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 86,
+    "kanji": "大学",
+    "reading": "だいがく",
+    "meaning": "đại học",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 87,
+    "kanji": "病院",
+    "reading": "びょういん",
+    "meaning": "bệnh viện",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 88,
+    "kanji": "銀行",
+    "reading": "ぎんこう",
+    "meaning": "ngân hàng",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 89,
+    "kanji": "郵便局",
+    "reading": "ゆうびんきょく",
+    "meaning": "bưu điện",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 90,
+    "kanji": "図書館",
+    "reading": "としょかん",
+    "meaning": "thư viện",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 91,
+    "kanji": "公園",
+    "reading": "こうえん",
+    "meaning": "công viên",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 92,
+    "kanji": "駅",
+    "reading": "えき",
+    "meaning": "ga tàu",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 93,
+    "kanji": "空港",
+    "reading": "くうこう",
+    "meaning": "sân bay",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 94,
+    "kanji": "店",
+    "reading": "みせ",
+    "meaning": "cửa hàng",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 95,
+    "kanji": "レストラン",
+    "reading": "レストラン",
+    "meaning": "nhà hàng",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 96,
+    "kanji": "喫茶店",
+    "reading": "きっさてん",
+    "meaning": "quán cà phê",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 97,
+    "kanji": "デパート",
+    "reading": "デパート",
+    "meaning": "trung tâm thương mại",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 98,
+    "kanji": "スーパー",
+    "reading": "スーパー",
+    "meaning": "siêu thị",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 99,
+    "kanji": "家",
+    "reading": "いえ",
+    "meaning": "nhà",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 100,
+    "kanji": "部屋",
+    "reading": "へや",
+    "meaning": "căn phòng",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 101,
+    "kanji": "トイレ",
+    "reading": "トイレ",
+    "meaning": "nhà vệ sinh",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 102,
+    "kanji": "玄関",
+    "reading": "げんかん",
+    "meaning": "lối vào (nhà)",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 103,
+    "kanji": "庭",
+    "reading": "にわ",
+    "meaning": "sân, vườn",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 104,
+    "kanji": "道",
+    "reading": "みち",
+    "meaning": "con đường",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 105,
+    "kanji": "橋",
+    "reading": "はし",
+    "meaning": "cây cầu",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 106,
+    "kanji": "町",
+    "reading": "まち",
+    "meaning": "thị trấn, phố",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 107,
+    "kanji": "市",
+    "reading": "し",
+    "meaning": "thành phố",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 108,
+    "kanji": "国",
+    "reading": "くに",
+    "meaning": "đất nước",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 109,
+    "kanji": "外",
+    "reading": "そと",
+    "meaning": "bên ngoài",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 110,
+    "kanji": "中",
+    "reading": "なか",
+    "meaning": "bên trong",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 111,
+    "kanji": "入り口",
+    "reading": "いりぐち",
+    "meaning": "lối vào",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 112,
+    "kanji": "出口",
+    "reading": "でぐち",
+    "meaning": "lối ra",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 113,
+    "kanji": "教室",
+    "reading": "きょうしつ",
+    "meaning": "phòng học",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 114,
+    "kanji": "会議室",
+    "reading": "かいぎしつ",
+    "meaning": "phòng họp",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 115,
+    "kanji": "台所",
+    "reading": "だいどころ",
+    "meaning": "nhà bếp",
+    "category": "Nơi chốn"
+  },
+  {
+    "id": 116,
+    "kanji": "本",
+    "reading": "ほん",
+    "meaning": "sách",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 117,
+    "kanji": "雑誌",
+    "reading": "ざっし",
+    "meaning": "tạp chí",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 118,
+    "kanji": "新聞",
+    "reading": "しんぶん",
+    "meaning": "báo",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 119,
+    "kanji": "辞書",
+    "reading": "じしょ",
+    "meaning": "từ điển",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 120,
+    "kanji": "鉛筆",
+    "reading": "えんぴつ",
+    "meaning": "bút chì",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 121,
+    "kanji": "ペン",
+    "reading": "ペン",
+    "meaning": "bút",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 122,
+    "kanji": "紙",
+    "reading": "かみ",
+    "meaning": "giấy",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 123,
+    "kanji": "机",
+    "reading": "つくえ",
+    "meaning": "cái bàn",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 124,
+    "kanji": "椅子",
+    "reading": "いす",
+    "meaning": "cái ghế",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 125,
+    "kanji": "鞄",
+    "reading": "かばん",
+    "meaning": "cặp, túi xách",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 126,
+    "kanji": "傘",
+    "reading": "かさ",
+    "meaning": "cái ô",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 127,
+    "kanji": "時計",
+    "reading": "とけい",
+    "meaning": "đồng hồ",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 128,
+    "kanji": "眼鏡",
+    "reading": "めがね",
+    "meaning": "kính mắt",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 129,
+    "kanji": "財布",
+    "reading": "さいふ",
+    "meaning": "ví tiền",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 130,
+    "kanji": "鍵",
+    "reading": "かぎ",
+    "meaning": "chìa khóa",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 131,
+    "kanji": "箱",
+    "reading": "はこ",
+    "meaning": "cái hộp",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 132,
+    "kanji": "袋",
+    "reading": "ふくろ",
+    "meaning": "cái túi",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 133,
+    "kanji": "写真",
+    "reading": "しゃしん",
+    "meaning": "ảnh chụp",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 134,
+    "kanji": "カメラ",
+    "reading": "カメラ",
+    "meaning": "máy ảnh",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 135,
+    "kanji": "テレビ",
+    "reading": "テレビ",
+    "meaning": "tivi",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 136,
+    "kanji": "ラジオ",
+    "reading": "ラジオ",
+    "meaning": "radio",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 137,
+    "kanji": "電話",
+    "reading": "でんわ",
+    "meaning": "điện thoại",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 138,
+    "kanji": "コンピューター",
+    "reading": "コンピューター",
+    "meaning": "máy tính",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 139,
+    "kanji": "パソコン",
+    "reading": "パソコン",
+    "meaning": "máy tính cá nhân",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 140,
+    "kanji": "自転車",
+    "reading": "じてんしゃ",
+    "meaning": "xe đạp",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 141,
+    "kanji": "車",
+    "reading": "くるま",
+    "meaning": "xe hơi",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 142,
+    "kanji": "電車",
+    "reading": "でんしゃ",
+    "meaning": "tàu điện",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 143,
+    "kanji": "飛行機",
+    "reading": "ひこうき",
+    "meaning": "máy bay",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 144,
+    "kanji": "船",
+    "reading": "ふね",
+    "meaning": "tàu thủy",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 145,
+    "kanji": "バス",
+    "reading": "バス",
+    "meaning": "xe buýt",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 146,
+    "kanji": "タクシー",
+    "reading": "タクシー",
+    "meaning": "taxi",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 147,
+    "kanji": "切符",
+    "reading": "きっぷ",
+    "meaning": "vé",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 148,
+    "kanji": "荷物",
+    "reading": "にもつ",
+    "meaning": "hành lý",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 149,
+    "kanji": "薬",
+    "reading": "くすり",
+    "meaning": "thuốc",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 150,
+    "kanji": "石鹸",
+    "reading": "せっけん",
+    "meaning": "xà phòng",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 151,
+    "kanji": "歯ブラシ",
+    "reading": "はブラシ",
+    "meaning": "bàn chải đánh răng",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 152,
+    "kanji": "靴",
+    "reading": "くつ",
+    "meaning": "giày",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 153,
+    "kanji": "靴下",
+    "reading": "くつした",
+    "meaning": "tất, vớ",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 154,
+    "kanji": "服",
+    "reading": "ふく",
+    "meaning": "quần áo",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 155,
+    "kanji": "シャツ",
+    "reading": "シャツ",
+    "meaning": "áo sơ mi",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 156,
+    "kanji": "ズボン",
+    "reading": "ズボン",
+    "meaning": "quần dài",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 157,
+    "kanji": "帽子",
+    "reading": "ぼうし",
+    "meaning": "mũ, nón",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 158,
+    "kanji": "手袋",
+    "reading": "てぶくろ",
+    "meaning": "găng tay",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 159,
+    "kanji": "花",
+    "reading": "はな",
+    "meaning": "hoa",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 160,
+    "kanji": "木",
+    "reading": "き",
+    "meaning": "cây",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 161,
+    "kanji": "葉書",
+    "reading": "はがき",
+    "meaning": "bưu thiếp",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 162,
+    "kanji": "手紙",
+    "reading": "てがみ",
+    "meaning": "thư tay",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 163,
+    "kanji": "切手",
+    "reading": "きって",
+    "meaning": "tem thư",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 164,
+    "kanji": "お金",
+    "reading": "おかね",
+    "meaning": "tiền",
+    "category": "Đồ vật"
+  },
+  {
+    "id": 165,
+    "kanji": "食べ物",
+    "reading": "たべもの",
+    "meaning": "đồ ăn",
+    "category": "Thức ăn"
+  },
+  {
+    "id": 166,
+    "kanji": "飲み物",
+    "reading": "のみもの",
+    "meaning": "đồ uống",
+    "category": "Thức ăn"
+  },
+  {
+    "id": 167,
+    "kanji": "ご飯",
+    "reading": "ごはん",
+    "meaning": "cơm",
+    "category": "Thức ăn"
+  },
+  {
+    "id": 168,
+    "kanji": "パン",
+    "reading": "パン",
+    "meaning": "bánh mì",
+    "category": "Thức ăn"
+  },
+  {
+    "id": 169,
+    "kanji": "水",
+    "reading": "みず",
+    "meaning": "nước",
+    "category": "Thức ăn"
+  },
+  {
+    "id": 170,
+    "kanji": "お茶",
+    "reading": "おちゃ",
+    "meaning": "trà",
+    "category": "Thức ăn"
+  },
+  {
+    "id": 171,
+    "kanji": "コーヒー",
+    "reading": "コーヒー",
+    "meaning": "cà phê",
+    "category": "Thức ăn"
+  },
+  {
+    "id": 172,
+    "kanji": "牛乳",
+    "reading": "ぎゅうにゅう",
+    "meaning": "sữa bò",
+    "category": "Thức ăn"
+  },
+  {
+    "id": 173,
+    "kanji": "卵",
+    "reading": "たまご",
+    "meaning": "trứng",
+    "category": "Thức ăn"
+  },
+  {
+    "id": 174,
+    "kanji": "肉",
+    "reading": "にく",
+    "meaning": "thịt",
+    "category": "Thức ăn"
+  },
+  {
+    "id": 175,
+    "kanji": "魚",
+    "reading": "さかな",
+    "meaning": "cá",
+    "category": "Thức ăn"
+  },
+  {
+    "id": 176,
+    "kanji": "野菜",
+    "reading": "やさい",
+    "meaning": "rau",
+    "category": "Thức ăn"
+  },
+  {
+    "id": 177,
+    "kanji": "果物",
+    "reading": "くだもの",
+    "meaning": "trái cây",
+    "category": "Thức ăn"
+  },
+  {
+    "id": 178,
+    "kanji": "りんご",
+    "reading": "りんご",
+    "meaning": "táo",
+    "category": "Thức ăn"
+  },
+  {
+    "id": 179,
+    "kanji": "みかん",
+    "reading": "みかん",
+    "meaning": "quýt",
+    "category": "Thức ăn"
+  },
+  {
+    "id": 180,
+    "kanji": "砂糖",
+    "reading": "さとう",
+    "meaning": "đường",
+    "category": "Thức ăn"
+  },
+  {
+    "id": 181,
+    "kanji": "塩",
+    "reading": "しお",
+    "meaning": "muối",
+    "category": "Thức ăn"
+  },
+  {
+    "id": 182,
+    "kanji": "お酒",
+    "reading": "おさけ",
+    "meaning": "rượu",
+    "category": "Thức ăn"
+  },
+  {
+    "id": 183,
+    "kanji": "料理",
+    "reading": "りょうり",
+    "meaning": "món ăn, nấu ăn",
+    "category": "Thức ăn"
+  },
+  {
+    "id": 184,
+    "kanji": "朝ご飯",
+    "reading": "あさごはん",
+    "meaning": "bữa sáng",
+    "category": "Thức ăn"
+  },
+  {
+    "id": 185,
+    "kanji": "昼ご飯",
+    "reading": "ひるごはん",
+    "meaning": "bữa trưa",
+    "category": "Thức ăn"
+  },
+  {
+    "id": 186,
+    "kanji": "晩ご飯",
+    "reading": "ばんごはん",
+    "meaning": "bữa tối",
+    "category": "Thức ăn"
+  },
+  {
+    "id": 187,
+    "kanji": "体",
+    "reading": "からだ",
+    "meaning": "cơ thể",
+    "category": "Sức khỏe"
+  },
+  {
+    "id": 188,
+    "kanji": "頭",
+    "reading": "あたま",
+    "meaning": "đầu",
+    "category": "Sức khỏe"
+  },
+  {
+    "id": 189,
+    "kanji": "顔",
+    "reading": "かお",
+    "meaning": "khuôn mặt",
+    "category": "Sức khỏe"
+  },
+  {
+    "id": 190,
+    "kanji": "目",
+    "reading": "め",
+    "meaning": "mắt",
+    "category": "Sức khỏe"
+  },
+  {
+    "id": 191,
+    "kanji": "耳",
+    "reading": "みみ",
+    "meaning": "tai",
+    "category": "Sức khỏe"
+  },
+  {
+    "id": 192,
+    "kanji": "鼻",
+    "reading": "はな",
+    "meaning": "mũi",
+    "category": "Sức khỏe"
+  },
+  {
+    "id": 193,
+    "kanji": "口",
+    "reading": "くち",
+    "meaning": "miệng",
+    "category": "Sức khỏe"
+  },
+  {
+    "id": 194,
+    "kanji": "歯",
+    "reading": "は",
+    "meaning": "răng",
+    "category": "Sức khỏe"
+  },
+  {
+    "id": 195,
+    "kanji": "手",
+    "reading": "て",
+    "meaning": "tay",
+    "category": "Sức khỏe"
+  },
+  {
+    "id": 196,
+    "kanji": "足",
+    "reading": "あし",
+    "meaning": "chân",
+    "category": "Sức khỏe"
+  },
+  {
+    "id": 197,
+    "kanji": "病気",
+    "reading": "びょうき",
+    "meaning": "bệnh tật",
+    "category": "Sức khỏe"
+  },
+  {
+    "id": 198,
+    "kanji": "風邪",
+    "reading": "かぜ",
+    "meaning": "cảm cúm",
+    "category": "Sức khỏe"
+  },
+  {
+    "id": 199,
+    "kanji": "元気",
+    "reading": "げんき",
+    "meaning": "khỏe mạnh, năng lượng",
+    "category": "Sức khỏe"
+  },
+  {
+    "id": 200,
+    "kanji": "勉強",
+    "reading": "べんきょう",
+    "meaning": "học tập",
+    "category": "Trường học"
+  },
+  {
+    "id": 201,
+    "kanji": "宿題",
+    "reading": "しゅくだい",
+    "meaning": "bài tập về nhà",
+    "category": "Trường học"
+  },
+  {
+    "id": 202,
+    "kanji": "試験",
+    "reading": "しけん",
+    "meaning": "kỳ thi",
+    "category": "Trường học"
+  },
+  {
+    "id": 203,
+    "kanji": "テスト",
+    "reading": "テスト",
+    "meaning": "bài kiểm tra",
+    "category": "Trường học"
+  },
+  {
+    "id": 204,
+    "kanji": "授業",
+    "reading": "じゅぎょう",
+    "meaning": "tiết học",
+    "category": "Trường học"
+  },
+  {
+    "id": 205,
+    "kanji": "質問",
+    "reading": "しつもん",
+    "meaning": "câu hỏi",
+    "category": "Trường học"
+  },
+  {
+    "id": 206,
+    "kanji": "答え",
+    "reading": "こたえ",
+    "meaning": "câu trả lời",
+    "category": "Trường học"
+  },
+  {
+    "id": 207,
+    "kanji": "問題",
+    "reading": "もんだい",
+    "meaning": "vấn đề, bài toán",
+    "category": "Trường học"
+  },
+  {
+    "id": 208,
+    "kanji": "言葉",
+    "reading": "ことば",
+    "meaning": "từ ngữ, ngôn từ",
+    "category": "Trường học"
+  },
+  {
+    "id": 209,
+    "kanji": "意味",
+    "reading": "いみ",
+    "meaning": "ý nghĩa",
+    "category": "Trường học"
+  },
+  {
+    "id": 210,
+    "kanji": "漢字",
+    "reading": "かんじ",
+    "meaning": "chữ Hán",
+    "category": "Trường học"
+  },
+  {
+    "id": 211,
+    "kanji": "会話",
+    "reading": "かいわ",
+    "meaning": "hội thoại",
+    "category": "Trường học"
+  },
+  {
+    "id": 212,
+    "kanji": "仕事",
+    "reading": "しごと",
+    "meaning": "công việc",
+    "category": "Trường học"
+  },
+  {
+    "id": 213,
+    "kanji": "会議",
+    "reading": "かいぎ",
+    "meaning": "cuộc họp",
+    "category": "Trường học"
+  },
+  {
+    "id": 214,
+    "kanji": "行く",
+    "reading": "いく",
+    "meaning": "đi",
+    "category": "Động từ"
+  },
+  {
+    "id": 215,
+    "kanji": "来る",
+    "reading": "くる",
+    "meaning": "đến",
+    "category": "Động từ"
+  },
+  {
+    "id": 216,
+    "kanji": "帰る",
+    "reading": "かえる",
+    "meaning": "về, quay về",
+    "category": "Động từ"
+  },
+  {
+    "id": 217,
+    "kanji": "入る",
+    "reading": "はいる",
+    "meaning": "đi vào",
+    "category": "Động từ"
+  },
+  {
+    "id": 218,
+    "kanji": "出る",
+    "reading": "でる",
+    "meaning": "đi ra",
+    "category": "Động từ"
+  },
+  {
+    "id": 219,
+    "kanji": "立つ",
+    "reading": "たつ",
+    "meaning": "đứng",
+    "category": "Động từ"
+  },
+  {
+    "id": 220,
+    "kanji": "座る",
+    "reading": "すわる",
+    "meaning": "ngồi",
+    "category": "Động từ"
+  },
+  {
+    "id": 221,
+    "kanji": "見る",
+    "reading": "みる",
+    "meaning": "nhìn, xem",
+    "category": "Động từ"
+  },
+  {
+    "id": 222,
+    "kanji": "聞く",
+    "reading": "きく",
+    "meaning": "nghe, hỏi",
+    "category": "Động từ"
+  },
+  {
+    "id": 223,
+    "kanji": "話す",
+    "reading": "はなす",
+    "meaning": "nói chuyện",
+    "category": "Động từ"
+  },
+  {
+    "id": 224,
+    "kanji": "言う",
+    "reading": "いう",
+    "meaning": "nói",
+    "category": "Động từ"
+  },
+  {
+    "id": 225,
+    "kanji": "読む",
+    "reading": "よむ",
+    "meaning": "đọc",
+    "category": "Động từ"
+  },
+  {
+    "id": 226,
+    "kanji": "書く",
+    "reading": "かく",
+    "meaning": "viết",
+    "category": "Động từ"
+  },
+  {
+    "id": 227,
+    "kanji": "食べる",
+    "reading": "たべる",
+    "meaning": "ăn",
+    "category": "Động từ"
+  },
+  {
+    "id": 228,
+    "kanji": "飲む",
+    "reading": "のむ",
+    "meaning": "uống",
+    "category": "Động từ"
+  },
+  {
+    "id": 229,
+    "kanji": "買う",
+    "reading": "かう",
+    "meaning": "mua",
+    "category": "Động từ"
+  },
+  {
+    "id": 230,
+    "kanji": "売る",
+    "reading": "うる",
+    "meaning": "bán",
+    "category": "Động từ"
+  },
+  {
+    "id": 231,
+    "kanji": "作る",
+    "reading": "つくる",
+    "meaning": "làm, tạo ra",
+    "category": "Động từ"
+  },
+  {
+    "id": 232,
+    "kanji": "使う",
+    "reading": "つかう",
+    "meaning": "sử dụng",
+    "category": "Động từ"
+  },
+  {
+    "id": 233,
+    "kanji": "待つ",
+    "reading": "まつ",
+    "meaning": "chờ đợi",
+    "category": "Động từ"
+  },
+  {
+    "id": 234,
+    "kanji": "会う",
+    "reading": "あう",
+    "meaning": "gặp gỡ",
+    "category": "Động từ"
+  },
+  {
+    "id": 235,
+    "kanji": "休む",
+    "reading": "やすむ",
+    "meaning": "nghỉ ngơi",
+    "category": "Động từ"
+  },
+  {
+    "id": 236,
+    "kanji": "働く",
+    "reading": "はたらく",
+    "meaning": "làm việc",
+    "category": "Động từ"
+  },
+  {
+    "id": 237,
+    "kanji": "寝る",
+    "reading": "ねる",
+    "meaning": "ngủ",
+    "category": "Động từ"
+  },
+  {
+    "id": 238,
+    "kanji": "起きる",
+    "reading": "おきる",
+    "meaning": "thức dậy",
+    "category": "Động từ"
+  },
+  {
+    "id": 239,
+    "kanji": "洗う",
+    "reading": "あらう",
+    "meaning": "rửa, giặt",
+    "category": "Động từ"
+  },
+  {
+    "id": 240,
+    "kanji": "勉強する",
+    "reading": "べんきょうする",
+    "meaning": "học tập",
+    "category": "Động từ"
+  },
+  {
+    "id": 241,
+    "kanji": "練習する",
+    "reading": "れんしゅうする",
+    "meaning": "luyện tập",
+    "category": "Động từ"
+  },
+  {
+    "id": 242,
+    "kanji": "運動する",
+    "reading": "うんどうする",
+    "meaning": "vận động, tập thể dục",
+    "category": "Động từ"
+  },
+  {
+    "id": 243,
+    "kanji": "散歩する",
+    "reading": "さんぽする",
+    "meaning": "đi dạo",
+    "category": "Động từ"
+  },
+  {
+    "id": 244,
+    "kanji": "旅行する",
+    "reading": "りょこうする",
+    "meaning": "đi du lịch",
+    "category": "Động từ"
+  },
+  {
+    "id": 245,
+    "kanji": "結婚する",
+    "reading": "けっこんする",
+    "meaning": "kết hôn",
+    "category": "Động từ"
+  },
+  {
+    "id": 246,
+    "kanji": "開ける",
+    "reading": "あける",
+    "meaning": "mở (cửa, hộp)",
+    "category": "Động từ"
+  },
+  {
+    "id": 247,
+    "kanji": "閉める",
+    "reading": "しめる",
+    "meaning": "đóng",
+    "category": "Động từ"
+  },
+  {
+    "id": 248,
+    "kanji": "開く",
+    "reading": "あく",
+    "meaning": "tự mở ra",
+    "category": "Động từ"
+  },
+  {
+    "id": 249,
+    "kanji": "閉まる",
+    "reading": "しまる",
+    "meaning": "tự đóng lại",
+    "category": "Động từ"
+  },
+  {
+    "id": 250,
+    "kanji": "押す",
+    "reading": "おす",
+    "meaning": "đẩy, nhấn",
+    "category": "Động từ"
+  },
+  {
+    "id": 251,
+    "kanji": "引く",
+    "reading": "ひく",
+    "meaning": "kéo",
+    "category": "Động từ"
+  },
+  {
+    "id": 252,
+    "kanji": "持つ",
+    "reading": "もつ",
+    "meaning": "cầm, mang",
+    "category": "Động từ"
+  },
+  {
+    "id": 253,
+    "kanji": "知る",
+    "reading": "しる",
+    "meaning": "biết",
+    "category": "Động từ"
+  },
+  {
+    "id": 254,
+    "kanji": "分かる",
+    "reading": "わかる",
+    "meaning": "hiểu",
+    "category": "Động từ"
+  },
+  {
+    "id": 255,
+    "kanji": "忘れる",
+    "reading": "わすれる",
+    "meaning": "quên",
+    "category": "Động từ"
+  },
+  {
+    "id": 256,
+    "kanji": "覚える",
+    "reading": "おぼえる",
+    "meaning": "ghi nhớ",
+    "category": "Động từ"
+  },
+  {
+    "id": 257,
+    "kanji": "思う",
+    "reading": "おもう",
+    "meaning": "nghĩ, cảm thấy",
+    "category": "Động từ"
+  },
+  {
+    "id": 258,
+    "kanji": "考える",
+    "reading": "かんがえる",
+    "meaning": "suy nghĩ",
+    "category": "Động từ"
+  },
+  {
+    "id": 259,
+    "kanji": "教える",
+    "reading": "おしえる",
+    "meaning": "dạy",
+    "category": "Động từ"
+  },
+  {
+    "id": 260,
+    "kanji": "習う",
+    "reading": "ならう",
+    "meaning": "học (từ ai đó)",
+    "category": "Động từ"
+  },
+  {
+    "id": 261,
+    "kanji": "貸す",
+    "reading": "かす",
+    "meaning": "cho mượn",
+    "category": "Động từ"
+  },
+  {
+    "id": 262,
+    "kanji": "借りる",
+    "reading": "かりる",
+    "meaning": "mượn",
+    "category": "Động từ"
+  },
+  {
+    "id": 263,
+    "kanji": "送る",
+    "reading": "おくる",
+    "meaning": "gửi",
+    "category": "Động từ"
+  },
+  {
+    "id": 264,
+    "kanji": "届く",
+    "reading": "とどく",
+    "meaning": "đến nơi, được gửi tới",
+    "category": "Động từ"
+  },
+  {
+    "id": 265,
+    "kanji": "取る",
+    "reading": "とる",
+    "meaning": "lấy",
+    "category": "Động từ"
+  },
+  {
+    "id": 266,
+    "kanji": "渡す",
+    "reading": "わたす",
+    "meaning": "đưa, trao",
+    "category": "Động từ"
+  },
+  {
+    "id": 267,
+    "kanji": "もらう",
+    "reading": "もらう",
+    "meaning": "nhận được",
+    "category": "Động từ"
+  },
+  {
+    "id": 268,
+    "kanji": "あげる",
+    "reading": "あげる",
+    "meaning": "cho, tặng",
+    "category": "Động từ"
+  },
+  {
+    "id": 269,
+    "kanji": "くれる",
+    "reading": "くれる",
+    "meaning": "(người khác) cho tôi",
+    "category": "Động từ"
+  },
+  {
+    "id": 270,
+    "kanji": "死ぬ",
+    "reading": "しぬ",
+    "meaning": "chết",
+    "category": "Động từ"
+  },
+  {
+    "id": 271,
+    "kanji": "生きる",
+    "reading": "いきる",
+    "meaning": "sống",
+    "category": "Động từ"
+  },
+  {
+    "id": 272,
+    "kanji": "住む",
+    "reading": "すむ",
+    "meaning": "sinh sống, cư trú",
+    "category": "Động từ"
+  },
+  {
+    "id": 273,
+    "kanji": "生まれる",
+    "reading": "うまれる",
+    "meaning": "được sinh ra",
+    "category": "Động từ"
+  },
+  {
+    "id": 274,
+    "kanji": "始まる",
+    "reading": "はじまる",
+    "meaning": "bắt đầu (tự động)",
+    "category": "Động từ"
+  },
+  {
+    "id": 275,
+    "kanji": "始める",
+    "reading": "はじめる",
+    "meaning": "bắt đầu (làm gì)",
+    "category": "Động từ"
+  },
+  {
+    "id": 276,
+    "kanji": "終わる",
+    "reading": "おわる",
+    "meaning": "kết thúc",
+    "category": "Động từ"
+  },
+  {
+    "id": 277,
+    "kanji": "続ける",
+    "reading": "つづける",
+    "meaning": "tiếp tục",
+    "category": "Động từ"
+  },
+  {
+    "id": 278,
+    "kanji": "止まる",
+    "reading": "とまる",
+    "meaning": "dừng lại",
+    "category": "Động từ"
+  },
+  {
+    "id": 279,
+    "kanji": "止める",
+    "reading": "とめる",
+    "meaning": "dừng (cái gì)",
+    "category": "Động từ"
+  },
+  {
+    "id": 280,
+    "kanji": "走る",
+    "reading": "はしる",
+    "meaning": "chạy",
+    "category": "Động từ"
+  },
+  {
+    "id": 281,
+    "kanji": "歩く",
+    "reading": "あるく",
+    "meaning": "đi bộ",
+    "category": "Động từ"
+  },
+  {
+    "id": 282,
+    "kanji": "泳ぐ",
+    "reading": "およぐ",
+    "meaning": "bơi",
+    "category": "Động từ"
+  },
+  {
+    "id": 283,
+    "kanji": "飛ぶ",
+    "reading": "とぶ",
+    "meaning": "bay",
+    "category": "Động từ"
+  },
+  {
+    "id": 284,
+    "kanji": "登る",
+    "reading": "のぼる",
+    "meaning": "leo, trèo",
+    "category": "Động từ"
+  },
+  {
+    "id": 285,
+    "kanji": "落ちる",
+    "reading": "おちる",
+    "meaning": "rơi xuống",
+    "category": "Động từ"
+  },
+  {
+    "id": 286,
+    "kanji": "上がる",
+    "reading": "あがる",
+    "meaning": "lên, tăng lên",
+    "category": "Động từ"
+  },
+  {
+    "id": 287,
+    "kanji": "下がる",
+    "reading": "さがる",
+    "meaning": "xuống, giảm xuống",
+    "category": "Động từ"
+  },
+  {
+    "id": 288,
+    "kanji": "乗る",
+    "reading": "のる",
+    "meaning": "lên (xe, tàu)",
+    "category": "Động từ"
+  },
+  {
+    "id": 289,
+    "kanji": "降りる",
+    "reading": "おりる",
+    "meaning": "xuống (xe, tàu)",
+    "category": "Động từ"
+  },
+  {
+    "id": 290,
+    "kanji": "洗濯する",
+    "reading": "せんたくする",
+    "meaning": "giặt giũ",
+    "category": "Động từ"
+  },
+  {
+    "id": 291,
+    "kanji": "掃除する",
+    "reading": "そうじする",
+    "meaning": "dọn dẹp",
+    "category": "Động từ"
+  },
+  {
+    "id": 292,
+    "kanji": "料理する",
+    "reading": "りょうりする",
+    "meaning": "nấu ăn",
+    "category": "Động từ"
+  },
+  {
+    "id": 293,
+    "kanji": "片付ける",
+    "reading": "かたづける",
+    "meaning": "dọn dẹp, sắp xếp",
+    "category": "Động từ"
+  },
+  {
+    "id": 294,
+    "kanji": "運転する",
+    "reading": "うんてんする",
+    "meaning": "lái xe",
+    "category": "Động từ"
+  },
+  {
+    "id": 295,
+    "kanji": "止める",
+    "reading": "やめる",
+    "meaning": "dừng, từ bỏ",
+    "category": "Động từ"
+  },
+  {
+    "id": 296,
+    "kanji": "使える",
+    "reading": "つかえる",
+    "meaning": "có thể sử dụng",
+    "category": "Động từ"
+  },
+  {
+    "id": 297,
+    "kanji": "できる",
+    "reading": "できる",
+    "meaning": "có thể làm được",
+    "category": "Động từ"
+  },
+  {
+    "id": 298,
+    "kanji": "要る",
+    "reading": "いる",
+    "meaning": "cần",
+    "category": "Động từ"
+  },
+  {
+    "id": 299,
+    "kanji": "困る",
+    "reading": "こまる",
+    "meaning": "gặp khó khăn",
+    "category": "Động từ"
+  },
+  {
+    "id": 300,
+    "kanji": "急ぐ",
+    "reading": "いそぐ",
+    "meaning": "vội vàng",
+    "category": "Động từ"
+  },
+  {
+    "id": 301,
+    "kanji": "疲れる",
+    "reading": "つかれる",
+    "meaning": "mệt mỏi",
+    "category": "Động từ"
+  },
+  {
+    "id": 302,
+    "kanji": "痛い",
+    "reading": "いたい",
+    "meaning": "đau",
+    "category": "Động từ"
+  },
+  {
+    "id": 303,
+    "kanji": "怒る",
+    "reading": "おこる",
+    "meaning": "tức giận",
+    "category": "Động từ"
+  },
+  {
+    "id": 304,
+    "kanji": "笑う",
+    "reading": "わらう",
+    "meaning": "cười",
+    "category": "Động từ"
+  },
+  {
+    "id": 305,
+    "kanji": "泣く",
+    "reading": "なく",
+    "meaning": "khóc",
+    "category": "Động từ"
+  },
+  {
+    "id": 306,
+    "kanji": "喜ぶ",
+    "reading": "よろこぶ",
+    "meaning": "vui mừng",
+    "category": "Động từ"
+  },
+  {
+    "id": 307,
+    "kanji": "驚く",
+    "reading": "おどろく",
+    "meaning": "ngạc nhiên",
+    "category": "Động từ"
+  },
+  {
+    "id": 308,
+    "kanji": "信じる",
+    "reading": "しんじる",
+    "meaning": "tin tưởng",
+    "category": "Động từ"
+  },
+  {
+    "id": 309,
+    "kanji": "探す",
+    "reading": "さがす",
+    "meaning": "tìm kiếm",
+    "category": "Động từ"
+  },
+  {
+    "id": 310,
+    "kanji": "見つける",
+    "reading": "みつける",
+    "meaning": "tìm thấy",
+    "category": "Động từ"
+  },
+  {
+    "id": 311,
+    "kanji": "触る",
+    "reading": "さわる",
+    "meaning": "chạm vào",
+    "category": "Động từ"
+  },
+  {
+    "id": 312,
+    "kanji": "呼ぶ",
+    "reading": "よぶ",
+    "meaning": "gọi",
+    "category": "Động từ"
+  },
+  {
+    "id": 313,
+    "kanji": "答える",
+    "reading": "こたえる",
+    "meaning": "trả lời",
+    "category": "Động từ"
+  },
+  {
+    "id": 314,
+    "kanji": "並べる",
+    "reading": "ならべる",
+    "meaning": "xếp hàng, bày ra",
+    "category": "Động từ"
+  },
+  {
+    "id": 315,
+    "kanji": "並ぶ",
+    "reading": "ならぶ",
+    "meaning": "xếp thành hàng",
+    "category": "Động từ"
+  },
+  {
+    "id": 316,
+    "kanji": "違う",
+    "reading": "ちがう",
+    "meaning": "khác, sai",
+    "category": "Động từ"
+  },
+  {
+    "id": 317,
+    "kanji": "直す",
+    "reading": "なおす",
+    "meaning": "sửa chữa",
+    "category": "Động từ"
+  },
+  {
+    "id": 318,
+    "kanji": "治る",
+    "reading": "なおる",
+    "meaning": "khỏi bệnh, được sửa",
+    "category": "Động từ"
+  },
+  {
+    "id": 319,
+    "kanji": "大きい",
+    "reading": "おおきい",
+    "meaning": "to, lớn",
+    "category": "Tính từ"
+  },
+  {
+    "id": 320,
+    "kanji": "小さい",
+    "reading": "ちいさい",
+    "meaning": "nhỏ",
+    "category": "Tính từ"
+  },
+  {
+    "id": 321,
+    "kanji": "新しい",
+    "reading": "あたらしい",
+    "meaning": "mới",
+    "category": "Tính từ"
+  },
+  {
+    "id": 322,
+    "kanji": "古い",
+    "reading": "ふるい",
+    "meaning": "cũ",
+    "category": "Tính từ"
+  },
+  {
+    "id": 323,
+    "kanji": "高い",
+    "reading": "たかい",
+    "meaning": "cao, đắt",
+    "category": "Tính từ"
+  },
+  {
+    "id": 324,
+    "kanji": "安い",
+    "reading": "やすい",
+    "meaning": "rẻ",
+    "category": "Tính từ"
+  },
+  {
+    "id": 325,
+    "kanji": "低い",
+    "reading": "ひくい",
+    "meaning": "thấp",
+    "category": "Tính từ"
+  },
+  {
+    "id": 326,
+    "kanji": "良い",
+    "reading": "いい",
+    "meaning": "tốt",
+    "category": "Tính từ"
+  },
+  {
+    "id": 327,
+    "kanji": "悪い",
+    "reading": "わるい",
+    "meaning": "xấu",
+    "category": "Tính từ"
+  },
+  {
+    "id": 328,
+    "kanji": "暑い",
+    "reading": "あつい",
+    "meaning": "nóng (thời tiết)",
+    "category": "Tính từ"
+  },
+  {
+    "id": 329,
+    "kanji": "寒い",
+    "reading": "さむい",
+    "meaning": "lạnh (thời tiết)",
+    "category": "Tính từ"
+  },
+  {
+    "id": 330,
+    "kanji": "暖かい",
+    "reading": "あたたかい",
+    "meaning": "ấm áp",
+    "category": "Tính từ"
+  },
+  {
+    "id": 331,
+    "kanji": "涼しい",
+    "reading": "すずしい",
+    "meaning": "mát mẻ",
+    "category": "Tính từ"
+  },
+  {
+    "id": 332,
+    "kanji": "熱い",
+    "reading": "あつい",
+    "meaning": "nóng (vật, đồ ăn)",
+    "category": "Tính từ"
+  },
+  {
+    "id": 333,
+    "kanji": "冷たい",
+    "reading": "つめたい",
+    "meaning": "lạnh (vật, đồ ăn)",
+    "category": "Tính từ"
+  },
+  {
+    "id": 334,
+    "kanji": "忙しい",
+    "reading": "いそがしい",
+    "meaning": "bận rộn",
+    "category": "Tính từ"
+  },
+  {
+    "id": 335,
+    "kanji": "暇",
+    "reading": "ひま",
+    "meaning": "rảnh rỗi",
+    "category": "Tính từ"
+  },
+  {
+    "id": 336,
+    "kanji": "楽しい",
+    "reading": "たのしい",
+    "meaning": "vui vẻ",
+    "category": "Tính từ"
+  },
+  {
+    "id": 337,
+    "kanji": "面白い",
+    "reading": "おもしろい",
+    "meaning": "thú vị",
+    "category": "Tính từ"
+  },
+  {
+    "id": 338,
+    "kanji": "つまらない",
+    "reading": "つまらない",
+    "meaning": "nhàm chán",
+    "category": "Tính từ"
+  },
+  {
+    "id": 339,
+    "kanji": "難しい",
+    "reading": "むずかしい",
+    "meaning": "khó",
+    "category": "Tính từ"
+  },
+  {
+    "id": 340,
+    "kanji": "易しい",
+    "reading": "やさしい",
+    "meaning": "dễ",
+    "category": "Tính từ"
+  },
+  {
+    "id": 341,
+    "kanji": "重い",
+    "reading": "おもい",
+    "meaning": "nặng",
+    "category": "Tính từ"
+  },
+  {
+    "id": 342,
+    "kanji": "軽い",
+    "reading": "かるい",
+    "meaning": "nhẹ",
+    "category": "Tính từ"
+  },
+  {
+    "id": 343,
+    "kanji": "強い",
+    "reading": "つよい",
+    "meaning": "mạnh",
+    "category": "Tính từ"
+  },
+  {
+    "id": 344,
+    "kanji": "弱い",
+    "reading": "よわい",
+    "meaning": "yếu",
+    "category": "Tính từ"
+  },
+  {
+    "id": 345,
+    "kanji": "速い",
+    "reading": "はやい",
+    "meaning": "nhanh",
+    "category": "Tính từ"
+  },
+  {
+    "id": 346,
+    "kanji": "遅い",
+    "reading": "おそい",
+    "meaning": "chậm, muộn",
+    "category": "Tính từ"
+  },
+  {
+    "id": 347,
+    "kanji": "近い",
+    "reading": "ちかい",
+    "meaning": "gần",
+    "category": "Tính từ"
+  },
+  {
+    "id": 348,
+    "kanji": "遠い",
+    "reading": "とおい",
+    "meaning": "xa",
+    "category": "Tính từ"
+  },
+  {
+    "id": 349,
+    "kanji": "多い",
+    "reading": "おおい",
+    "meaning": "nhiều",
+    "category": "Tính từ"
+  },
+  {
+    "id": 350,
+    "kanji": "少ない",
+    "reading": "すくない",
+    "meaning": "ít",
+    "category": "Tính từ"
+  },
+  {
+    "id": 351,
+    "kanji": "長い",
+    "reading": "ながい",
+    "meaning": "dài",
+    "category": "Tính từ"
+  },
+  {
+    "id": 352,
+    "kanji": "短い",
+    "reading": "みじかい",
+    "meaning": "ngắn",
+    "category": "Tính từ"
+  },
+  {
+    "id": 353,
+    "kanji": "広い",
+    "reading": "ひろい",
+    "meaning": "rộng",
+    "category": "Tính từ"
+  },
+  {
+    "id": 354,
+    "kanji": "狭い",
+    "reading": "せまい",
+    "meaning": "hẹp",
+    "category": "Tính từ"
+  },
+  {
+    "id": 355,
+    "kanji": "太い",
+    "reading": "ふとい",
+    "meaning": "to, mập",
+    "category": "Tính từ"
+  },
+  {
+    "id": 356,
+    "kanji": "細い",
+    "reading": "ほそい",
+    "meaning": "gầy, mảnh",
+    "category": "Tính từ"
+  },
+  {
+    "id": 357,
+    "kanji": "明るい",
+    "reading": "あかるい",
+    "meaning": "sáng sủa",
+    "category": "Tính từ"
+  },
+  {
+    "id": 358,
+    "kanji": "暗い",
+    "reading": "くらい",
+    "meaning": "tối tăm",
+    "category": "Tính từ"
+  },
+  {
+    "id": 359,
+    "kanji": "きれい",
+    "reading": "きれい",
+    "meaning": "đẹp, sạch sẽ",
+    "category": "Tính từ"
+  },
+  {
+    "id": 360,
+    "kanji": "汚い",
+    "reading": "きたない",
+    "meaning": "bẩn",
+    "category": "Tính từ"
+  },
+  {
+    "id": 361,
+    "kanji": "静か",
+    "reading": "しずか",
+    "meaning": "yên tĩnh",
+    "category": "Tính từ"
+  },
+  {
+    "id": 362,
+    "kanji": "にぎやか",
+    "reading": "にぎやか",
+    "meaning": "náo nhiệt",
+    "category": "Tính từ"
+  },
+  {
+    "id": 363,
+    "kanji": "親切",
+    "reading": "しんせつ",
+    "meaning": "tốt bụng, tử tế",
+    "category": "Tính từ"
+  },
+  {
+    "id": 364,
+    "kanji": "上手",
+    "reading": "じょうず",
+    "meaning": "giỏi, khéo léo",
+    "category": "Tính từ"
+  },
+  {
+    "id": 365,
+    "kanji": "下手",
+    "reading": "へた",
+    "meaning": "vụng về, kém",
+    "category": "Tính từ"
+  },
+  {
+    "id": 366,
+    "kanji": "好き",
+    "reading": "すき",
+    "meaning": "thích",
+    "category": "Tính từ"
+  },
+  {
+    "id": 367,
+    "kanji": "嫌い",
+    "reading": "きらい",
+    "meaning": "ghét",
+    "category": "Tính từ"
+  },
+  {
+    "id": 368,
+    "kanji": "有名",
+    "reading": "ゆうめい",
+    "meaning": "nổi tiếng",
+    "category": "Tính từ"
+  },
+  {
+    "id": 369,
+    "kanji": "大切",
+    "reading": "たいせつ",
+    "meaning": "quan trọng",
+    "category": "Tính từ"
+  },
+  {
+    "id": 370,
+    "kanji": "大事",
+    "reading": "だいじ",
+    "meaning": "quan trọng",
+    "category": "Tính từ"
+  },
+  {
+    "id": 371,
+    "kanji": "便利",
+    "reading": "べんり",
+    "meaning": "tiện lợi",
+    "category": "Tính từ"
+  },
+  {
+    "id": 372,
+    "kanji": "不便",
+    "reading": "ふべん",
+    "meaning": "bất tiện",
+    "category": "Tính từ"
+  },
+  {
+    "id": 373,
+    "kanji": "簡単",
+    "reading": "かんたん",
+    "meaning": "đơn giản",
+    "category": "Tính từ"
+  },
+  {
+    "id": 374,
+    "kanji": "複雑",
+    "reading": "ふくざつ",
+    "meaning": "phức tạp",
+    "category": "Tính từ"
+  },
+  {
+    "id": 375,
+    "kanji": "丈夫",
+    "reading": "じょうぶ",
+    "meaning": "chắc chắn, khỏe",
+    "category": "Tính từ"
+  },
+  {
+    "id": 376,
+    "kanji": "危険",
+    "reading": "きけん",
+    "meaning": "nguy hiểm",
+    "category": "Tính từ"
+  },
+  {
+    "id": 377,
+    "kanji": "安全",
+    "reading": "あんぜん",
+    "meaning": "an toàn",
+    "category": "Tính từ"
+  },
+  {
+    "id": 378,
+    "kanji": "同じ",
+    "reading": "おなじ",
+    "meaning": "giống nhau",
+    "category": "Tính từ"
+  },
+  {
+    "id": 379,
+    "kanji": "大丈夫",
+    "reading": "だいじょうぶ",
+    "meaning": "ổn, không sao",
+    "category": "Tính từ"
+  },
+  {
+    "id": 380,
+    "kanji": "いろいろ",
+    "reading": "いろいろ",
+    "meaning": "nhiều loại, đa dạng",
+    "category": "Tính từ"
+  },
+  {
+    "id": 381,
+    "kanji": "特別",
+    "reading": "とくべつ",
+    "meaning": "đặc biệt",
+    "category": "Tính từ"
+  },
+  {
+    "id": 382,
+    "kanji": "十分",
+    "reading": "じゅうぶん",
+    "meaning": "đầy đủ",
+    "category": "Tính từ"
+  },
+  {
+    "id": 383,
+    "kanji": "残念",
+    "reading": "ざんねん",
+    "meaning": "tiếc nuối",
+    "category": "Tính từ"
+  },
+  {
+    "id": 384,
+    "kanji": "眠い",
+    "reading": "ねむい",
+    "meaning": "buồn ngủ",
+    "category": "Tính từ"
+  },
+  {
+    "id": 385,
+    "kanji": "恥ずかしい",
+    "reading": "はずかしい",
+    "meaning": "xấu hổ",
+    "category": "Tính từ"
+  },
+  {
+    "id": 386,
+    "kanji": "うるさい",
+    "reading": "うるさい",
+    "meaning": "ồn ào",
+    "category": "Tính từ"
+  },
+  {
+    "id": 387,
+    "kanji": "優しい",
+    "reading": "やさしい",
+    "meaning": "dịu dàng, hiền lành",
+    "category": "Tính từ"
+  },
+  {
+    "id": 388,
+    "kanji": "若い",
+    "reading": "わかい",
+    "meaning": "trẻ",
+    "category": "Tính từ"
+  },
+  {
+    "id": 389,
+    "kanji": "とても",
+    "reading": "とても",
+    "meaning": "rất",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 390,
+    "kanji": "少し",
+    "reading": "すこし",
+    "meaning": "một chút",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 391,
+    "kanji": "たくさん",
+    "reading": "たくさん",
+    "meaning": "nhiều",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 392,
+    "kanji": "よく",
+    "reading": "よく",
+    "meaning": "thường xuyên, kỹ",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 393,
+    "kanji": "いつも",
+    "reading": "いつも",
+    "meaning": "luôn luôn",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 394,
+    "kanji": "時々",
+    "reading": "ときどき",
+    "meaning": "thỉnh thoảng",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 395,
+    "kanji": "たぶん",
+    "reading": "たぶん",
+    "meaning": "có lẽ",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 396,
+    "kanji": "もう",
+    "reading": "もう",
+    "meaning": "đã, rồi",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 397,
+    "kanji": "まだ",
+    "reading": "まだ",
+    "meaning": "vẫn chưa",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 398,
+    "kanji": "すぐ",
+    "reading": "すぐ",
+    "meaning": "ngay lập tức",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 399,
+    "kanji": "ゆっくり",
+    "reading": "ゆっくり",
+    "meaning": "chậm rãi",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 400,
+    "kanji": "初めて",
+    "reading": "はじめて",
+    "meaning": "lần đầu tiên",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 401,
+    "kanji": "それから",
+    "reading": "それから",
+    "meaning": "sau đó",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 402,
+    "kanji": "それで",
+    "reading": "それで",
+    "meaning": "vì vậy",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 403,
+    "kanji": "しかし",
+    "reading": "しかし",
+    "meaning": "tuy nhiên",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 404,
+    "kanji": "でも",
+    "reading": "でも",
+    "meaning": "nhưng",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 405,
+    "kanji": "そして",
+    "reading": "そして",
+    "meaning": "và, rồi thì",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 406,
+    "kanji": "または",
+    "reading": "または",
+    "meaning": "hoặc là",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 407,
+    "kanji": "もし",
+    "reading": "もし",
+    "meaning": "nếu như",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 408,
+    "kanji": "ちょっと",
+    "reading": "ちょっと",
+    "meaning": "một chút, hơi",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 409,
+    "kanji": "だんだん",
+    "reading": "だんだん",
+    "meaning": "dần dần",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 410,
+    "kanji": "もちろん",
+    "reading": "もちろん",
+    "meaning": "tất nhiên",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 411,
+    "kanji": "ぜひ",
+    "reading": "ぜひ",
+    "meaning": "nhất định",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 412,
+    "kanji": "あまり",
+    "reading": "あまり",
+    "meaning": "không mấy (đi với phủ định)",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 413,
+    "kanji": "全部",
+    "reading": "ぜんぶ",
+    "meaning": "tất cả",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 414,
+    "kanji": "一番",
+    "reading": "いちばん",
+    "meaning": "số một, nhất",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 415,
+    "kanji": "初め",
+    "reading": "はじめ",
+    "meaning": "lúc đầu",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 416,
+    "kanji": "最後",
+    "reading": "さいご",
+    "meaning": "cuối cùng",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 417,
+    "kanji": "後で",
+    "reading": "あとで",
+    "meaning": "sau này, lát nữa",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 418,
+    "kanji": "先に",
+    "reading": "さきに",
+    "meaning": "trước tiên",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 419,
+    "kanji": "すぐに",
+    "reading": "すぐに",
+    "meaning": "ngay lập tức",
+    "category": "Trạng từ"
+  },
+  {
+    "id": 420,
+    "kanji": "一つ",
+    "reading": "ひとつ",
+    "meaning": "một cái",
+    "category": "Số đếm"
+  },
+  {
+    "id": 421,
+    "kanji": "二つ",
+    "reading": "ふたつ",
+    "meaning": "hai cái",
+    "category": "Số đếm"
+  },
+  {
+    "id": 422,
+    "kanji": "三つ",
+    "reading": "みっつ",
+    "meaning": "ba cái",
+    "category": "Số đếm"
+  },
+  {
+    "id": 423,
+    "kanji": "四つ",
+    "reading": "よっつ",
+    "meaning": "bốn cái",
+    "category": "Số đếm"
+  },
+  {
+    "id": 424,
+    "kanji": "五つ",
+    "reading": "いつつ",
+    "meaning": "năm cái",
+    "category": "Số đếm"
+  },
+  {
+    "id": 425,
+    "kanji": "六つ",
+    "reading": "むっつ",
+    "meaning": "sáu cái",
+    "category": "Số đếm"
+  },
+  {
+    "id": 426,
+    "kanji": "七つ",
+    "reading": "ななつ",
+    "meaning": "bảy cái",
+    "category": "Số đếm"
+  },
+  {
+    "id": 427,
+    "kanji": "八つ",
+    "reading": "やっつ",
+    "meaning": "tám cái",
+    "category": "Số đếm"
+  },
+  {
+    "id": 428,
+    "kanji": "九つ",
+    "reading": "ここのつ",
+    "meaning": "chín cái",
+    "category": "Số đếm"
+  },
+  {
+    "id": 429,
+    "kanji": "十",
+    "reading": "とお",
+    "meaning": "mười cái",
+    "category": "Số đếm"
+  },
+  {
+    "id": 430,
+    "kanji": "何歳",
+    "reading": "なんさい",
+    "meaning": "mấy tuổi",
+    "category": "Số đếm"
+  },
+  {
+    "id": 431,
+    "kanji": "一人",
+    "reading": "ひとり",
+    "meaning": "một người",
+    "category": "Số đếm"
+  },
+  {
+    "id": 432,
+    "kanji": "二人",
+    "reading": "ふたり",
+    "meaning": "hai người",
+    "category": "Số đếm"
+  },
+  {
+    "id": 433,
+    "kanji": "何人",
+    "reading": "なんにん",
+    "meaning": "mấy người",
+    "category": "Số đếm"
+  },
+  {
+    "id": 434,
+    "kanji": "円",
+    "reading": "えん",
+    "meaning": "yên (tiền Nhật)",
+    "category": "Số đếm"
+  },
+  {
+    "id": 435,
+    "kanji": "枚",
+    "reading": "まい",
+    "meaning": "tờ, tấm (lượng từ)",
+    "category": "Số đếm"
+  },
+  {
+    "id": 436,
+    "kanji": "台",
+    "reading": "だい",
+    "meaning": "cái (máy móc, xe)",
+    "category": "Số đếm"
+  },
+  {
+    "id": 437,
+    "kanji": "冊",
+    "reading": "さつ",
+    "meaning": "cuốn (sách)",
+    "category": "Số đếm"
+  },
+  {
+    "id": 438,
+    "kanji": "回",
+    "reading": "かい",
+    "meaning": "lần",
+    "category": "Số đếm"
+  },
+  {
+    "id": 439,
+    "kanji": "階",
+    "reading": "かい",
+    "meaning": "tầng (nhà)",
+    "category": "Số đếm"
+  },
+  {
+    "id": 440,
+    "kanji": "天気",
+    "reading": "てんき",
+    "meaning": "thời tiết",
+    "category": "Tự nhiên"
+  },
+  {
+    "id": 441,
+    "kanji": "雨",
+    "reading": "あめ",
+    "meaning": "mưa",
+    "category": "Tự nhiên"
+  },
+  {
+    "id": 442,
+    "kanji": "雪",
+    "reading": "ゆき",
+    "meaning": "tuyết",
+    "category": "Tự nhiên"
+  },
+  {
+    "id": 443,
+    "kanji": "風",
+    "reading": "かぜ",
+    "meaning": "gió",
+    "category": "Tự nhiên"
+  },
+  {
+    "id": 444,
+    "kanji": "空",
+    "reading": "そら",
+    "meaning": "bầu trời",
+    "category": "Tự nhiên"
+  },
+  {
+    "id": 445,
+    "kanji": "海",
+    "reading": "うみ",
+    "meaning": "biển",
+    "category": "Tự nhiên"
+  },
+  {
+    "id": 446,
+    "kanji": "山",
+    "reading": "やま",
+    "meaning": "núi",
+    "category": "Tự nhiên"
+  },
+  {
+    "id": 447,
+    "kanji": "川",
+    "reading": "かわ",
+    "meaning": "sông",
+    "category": "Tự nhiên"
+  },
+  {
+    "id": 448,
+    "kanji": "池",
+    "reading": "いけ",
+    "meaning": "ao, hồ nhỏ",
+    "category": "Tự nhiên"
+  },
+  {
+    "id": 449,
+    "kanji": "太陽",
+    "reading": "たいよう",
+    "meaning": "mặt trời",
+    "category": "Tự nhiên"
+  },
+  {
+    "id": 450,
+    "kanji": "星",
+    "reading": "ほし",
+    "meaning": "ngôi sao",
+    "category": "Tự nhiên"
+  },
+  {
+    "id": 451,
+    "kanji": "春",
+    "reading": "はる",
+    "meaning": "mùa xuân",
+    "category": "Tự nhiên"
+  },
+  {
+    "id": 452,
+    "kanji": "夏",
+    "reading": "なつ",
+    "meaning": "mùa hè",
+    "category": "Tự nhiên"
+  },
+  {
+    "id": 453,
+    "kanji": "秋",
+    "reading": "あき",
+    "meaning": "mùa thu",
+    "category": "Tự nhiên"
+  },
+  {
+    "id": 454,
+    "kanji": "冬",
+    "reading": "ふゆ",
+    "meaning": "mùa đông",
+    "category": "Tự nhiên"
+  },
+  {
+    "id": 455,
+    "kanji": "犬",
+    "reading": "いぬ",
+    "meaning": "con chó",
+    "category": "Tự nhiên"
+  },
+  {
+    "id": 456,
+    "kanji": "猫",
+    "reading": "ねこ",
+    "meaning": "con mèo",
+    "category": "Tự nhiên"
+  },
+  {
+    "id": 457,
+    "kanji": "鳥",
+    "reading": "とり",
+    "meaning": "con chim",
+    "category": "Tự nhiên"
+  },
+  {
+    "id": 458,
+    "kanji": "音楽",
+    "reading": "おんがく",
+    "meaning": "âm nhạc",
+    "category": "Giải trí"
+  },
+  {
+    "id": 459,
+    "kanji": "歌",
+    "reading": "うた",
+    "meaning": "bài hát",
+    "category": "Giải trí"
+  },
+  {
+    "id": 460,
+    "kanji": "映画",
+    "reading": "えいが",
+    "meaning": "phim ảnh",
+    "category": "Giải trí"
+  },
+  {
+    "id": 461,
+    "kanji": "絵",
+    "reading": "え",
+    "meaning": "tranh vẽ",
+    "category": "Giải trí"
+  },
+  {
+    "id": 462,
+    "kanji": "スポーツ",
+    "reading": "スポーツ",
+    "meaning": "thể thao",
+    "category": "Giải trí"
+  },
+  {
+    "id": 463,
+    "kanji": "野球",
+    "reading": "やきゅう",
+    "meaning": "bóng chày",
+    "category": "Giải trí"
+  },
+  {
+    "id": 464,
+    "kanji": "サッカー",
+    "reading": "サッカー",
+    "meaning": "bóng đá",
+    "category": "Giải trí"
+  },
+  {
+    "id": 465,
+    "kanji": "旅行",
+    "reading": "りょこう",
+    "meaning": "du lịch",
+    "category": "Giải trí"
+  },
+  {
+    "id": 466,
+    "kanji": "趣味",
+    "reading": "しゅみ",
+    "meaning": "sở thích",
+    "category": "Giải trí"
+  },
+  {
+    "id": 467,
+    "kanji": "パーティー",
+    "reading": "パーティー",
+    "meaning": "tiệc tùng",
+    "category": "Giải trí"
+  },
+  {
+    "id": 468,
+    "kanji": "プレゼント",
+    "reading": "プレゼント",
+    "meaning": "quà tặng",
+    "category": "Giải trí"
+  },
+  {
+    "id": 469,
+    "kanji": "上",
+    "reading": "うえ",
+    "meaning": "trên",
+    "category": "Vị trí"
+  },
+  {
+    "id": 470,
+    "kanji": "下",
+    "reading": "した",
+    "meaning": "dưới",
+    "category": "Vị trí"
+  },
+  {
+    "id": 471,
+    "kanji": "前",
+    "reading": "まえ",
+    "meaning": "phía trước",
+    "category": "Vị trí"
+  },
+  {
+    "id": 472,
+    "kanji": "後ろ",
+    "reading": "うしろ",
+    "meaning": "phía sau",
+    "category": "Vị trí"
+  },
+  {
+    "id": 473,
+    "kanji": "右",
+    "reading": "みぎ",
+    "meaning": "bên phải",
+    "category": "Vị trí"
+  },
+  {
+    "id": 474,
+    "kanji": "左",
+    "reading": "ひだり",
+    "meaning": "bên trái",
+    "category": "Vị trí"
+  },
+  {
+    "id": 475,
+    "kanji": "東",
+    "reading": "ひがし",
+    "meaning": "hướng Đông",
+    "category": "Vị trí"
+  },
+  {
+    "id": 476,
+    "kanji": "西",
+    "reading": "にし",
+    "meaning": "hướng Tây",
+    "category": "Vị trí"
+  },
+  {
+    "id": 477,
+    "kanji": "南",
+    "reading": "みなみ",
+    "meaning": "hướng Nam",
+    "category": "Vị trí"
+  },
+  {
+    "id": 478,
+    "kanji": "北",
+    "reading": "きた",
+    "meaning": "hướng Bắc",
+    "category": "Vị trí"
+  },
+  {
+    "id": 479,
+    "kanji": "隣",
+    "reading": "となり",
+    "meaning": "bên cạnh",
+    "category": "Vị trí"
+  },
+  {
+    "id": 480,
+    "kanji": "横",
+    "reading": "よこ",
+    "meaning": "bên cạnh, ngang",
+    "category": "Vị trí"
+  },
+  {
+    "id": 481,
+    "kanji": "間",
+    "reading": "あいだ",
+    "meaning": "khoảng giữa",
+    "category": "Vị trí"
+  },
+  {
+    "id": 482,
+    "kanji": "名前",
+    "reading": "なまえ",
+    "meaning": "tên",
+    "category": "Khác"
+  },
+  {
+    "id": 483,
+    "kanji": "住所",
+    "reading": "じゅうしょ",
+    "meaning": "địa chỉ",
+    "category": "Khác"
+  },
+  {
+    "id": 484,
+    "kanji": "電話番号",
+    "reading": "でんわばんごう",
+    "meaning": "số điện thoại",
+    "category": "Khác"
+  },
+  {
+    "id": 485,
+    "kanji": "予定",
+    "reading": "よてい",
+    "meaning": "kế hoạch, dự định",
+    "category": "Khác"
+  },
+  {
+    "id": 486,
+    "kanji": "約束",
+    "reading": "やくそく",
+    "meaning": "lời hứa, hẹn",
+    "category": "Khác"
+  },
+  {
+    "id": 487,
+    "kanji": "用事",
+    "reading": "ようじ",
+    "meaning": "việc cần làm",
+    "category": "Khác"
+  },
+  {
+    "id": 488,
+    "kanji": "番号",
+    "reading": "ばんごう",
+    "meaning": "số hiệu",
+    "category": "Khác"
+  },
+  {
+    "id": 489,
+    "kanji": "計画",
+    "reading": "けいかく",
+    "meaning": "kế hoạch",
+    "category": "Khác"
+  },
+  {
+    "id": 490,
+    "kanji": "理由",
+    "reading": "りゆう",
+    "meaning": "lý do",
+    "category": "Khác"
+  },
+  {
+    "id": 491,
+    "kanji": "原因",
+    "reading": "げんいん",
+    "meaning": "nguyên nhân",
+    "category": "Khác"
+  },
+  {
+    "id": 492,
+    "kanji": "以外",
+    "reading": "いがい",
+    "meaning": "ngoại trừ",
+    "category": "Khác"
+  },
+  {
+    "id": 493,
+    "kanji": "以上",
+    "reading": "いじょう",
+    "meaning": "trở lên",
+    "category": "Khác"
+  },
+  {
+    "id": 494,
+    "kanji": "以下",
+    "reading": "いか",
+    "meaning": "trở xuống",
+    "category": "Khác"
+  },
+  {
+    "id": 495,
+    "kanji": "以内",
+    "reading": "いない",
+    "meaning": "trong vòng",
+    "category": "Khác"
+  },
+  {
+    "id": 496,
+    "kanji": "最近",
+    "reading": "さいきん",
+    "meaning": "gần đây",
+    "category": "Khác"
+  },
+  {
+    "id": 497,
+    "kanji": "普通",
+    "reading": "ふつう",
+    "meaning": "bình thường",
+    "category": "Khác"
+  }
+]
