@@ -1,22 +1,7 @@
 import { useCallback, useEffect, useReducer, useRef } from 'react';
-import type { BoardSlot, CardStatus, VocabWord } from '../types';
+import type { CardEntry, CardStatus, GameState, VocabWord } from '../types';
 import { ALL_WORDS, BOARD_SIZE, SET_SIZE, ANIMATION_DURATION } from '../data/constants';
 import { shuffleArray } from '../utils/shuffle';
-
-interface State {
-  board: (BoardSlot | null)[];
-  setQueue: VocabWord[];
-  emptyPool: number[];
-  pendingCount: number;
-  selectedLeft: number | null;
-  selectedRight: number | null;
-  matchedCount: number;
-  setMatchedCount: number;
-  learnedCount: number;
-  lockInteraction: boolean;
-  activeCategories: string[];
-  showFilter: boolean;
-}
 
 type Action =
   | { type: 'SELECT_LEFT'; index: number }
@@ -29,47 +14,48 @@ const REFILL_THRESHOLD = 3;
 let keyCounter = 0;
 const nextKey = () => ++keyCounter;
 
-function makeSlot(pair: VocabWord): BoardSlot {
+function makeEntry(word: VocabWord): CardEntry {
   return {
-    pairId: pair.id,
-    leftWord: pair,
-    rightWord: pair,
-    leftStatus: 'idle',
-    rightStatus: 'idle',
-    leftKey: nextKey(),
-    rightKey: nextKey(),
+    pairId: word.id,
+    word,
+    status: 'idle',
+    key: nextKey(),
   };
 }
 
 /**
- * Shuffle 2 cột ĐỘC LẬP.
- * Lặp shuffle Fisher-Yates cho rightPairIds cho đến khi không còn
- * cặp nào trùng hàng (leftPairIds[i] !== rightPairIds[i] với mọi i).
+ * Mỗi cột là 5 từ shuffle hoàn toàn độc lập.
+ * leftCards[i] và rightCards[j] ghép thành cặp khi pairId giống nhau.
  */
-function buildBoard(pairs: VocabWord[]): (BoardSlot | null)[] {
-  const pairMap = new Map<number, VocabWord>(pairs.map((p) => [p.id, p]));
+function buildColumns(
+  leftWords: VocabWord[],
+  rightWords: VocabWord[]
+): { leftCards: CardEntry[]; rightCards: CardEntry[] } {
+  return {
+    leftCards: leftWords.map(makeEntry),
+    rightCards: rightWords.map(makeEntry),
+  };
+}
 
-  const leftPairIds = shuffleArray(pairs).map((p) => p.id);
-  let rightPairIds = shuffleArray(pairs).map((p) => p.id);
+/**
+ * Shuffle 2 cột độc lập: không cặp nào trùng hàng sau shuffle.
+ * Với BOARD_SIZE=5, xác suất trùng sau shuffle Fisher-Yates là thấp,
+ * nhưng check + retry để đảm bảo 100%.
+ */
+function buildBoard(pairs: VocabWord[]): { leftCards: CardEntry[]; rightCards: CardEntry[] } {
+  let leftWords = shuffleArray(pairs);
+  let rightWords = shuffleArray(pairs);
 
-  // Thử shuffle cho đến khi không còn trùng hàng
   let attempts = 0;
-  while (attempts < 100) {
-    const hasMatch = leftPairIds.some((id, i) => id === rightPairIds[i]);
+  while (attempts < 200) {
+    const hasMatch = leftWords.some((w, i) => w.id === rightWords[i].id);
     if (!hasMatch) break;
-    rightPairIds = shuffleArray(pairs).map((p) => p.id);
+    leftWords = shuffleArray(pairs);
+    rightWords = shuffleArray(pairs);
     attempts++;
   }
 
-  return leftPairIds.map((pairId, i) => ({
-    pairId,
-    leftWord: pairMap.get(pairId)!,
-    rightWord: pairMap.get(rightPairIds[i])!,
-    leftStatus: 'idle' as CardStatus,
-    rightStatus: 'idle' as CardStatus,
-    leftKey: nextKey(),
-    rightKey: nextKey(),
-  }));
+  return buildColumns(leftWords, rightWords);
 }
 
 function poolFromCategories(categories: string[]): VocabWord[] {
@@ -77,12 +63,16 @@ function poolFromCategories(categories: string[]): VocabWord[] {
   return ALL_WORDS.filter((w) => categories.includes(w.category));
 }
 
-function startSet(categories: string[]): State {
+function startSet(categories: string[]): GameState {
   const pool = shuffleArray(poolFromCategories(categories));
   const setQueue = pool.slice(0, SET_SIZE);
   const boardPairs = setQueue.slice(0, BOARD_SIZE);
+
+  const { leftCards, rightCards } = buildBoard(boardPairs);
+
   return {
-    board: buildBoard(boardPairs),
+    leftCards,
+    rightCards,
     setQueue: setQueue.slice(BOARD_SIZE),
     emptyPool: [],
     pendingCount: 0,
@@ -97,65 +87,67 @@ function startSet(categories: string[]): State {
   };
 }
 
-function reducer(state: State, action: Action): State {
+function updateCard(
+  cards: CardEntry[],
+  index: number,
+  status: CardStatus
+): CardEntry[] {
+  if (index === -1) {
+    return cards.map((c) => ({ ...c, status }));
+  }
+  return cards.map((c, i) => (i === index ? { ...c, status } : c));
+}
+
+function reducer(state: GameState, action: Action): GameState {
   switch (action.type) {
     case 'SELECT_LEFT': {
       if (state.lockInteraction) return state;
-      const idx = action.index;
-      const slot = state.board[idx];
-      if (!slot) return state;
 
-      if (state.selectedLeft === idx) {
+      if (state.selectedLeft === action.index) {
         return { ...state, selectedLeft: null };
       }
 
-      const board = state.board.map((s, i) =>
-        i === idx && s ? { ...s, leftStatus: 'selected' as CardStatus } : s
-      );
-      return { ...state, selectedLeft: idx, board };
+      const leftCards = updateCard(state.leftCards, action.index, 'selected');
+      return { ...state, selectedLeft: action.index, leftCards };
     }
 
     case 'SELECT_RIGHT': {
       if (state.lockInteraction || state.selectedLeft === null) return state;
-      const rIdx = action.index;
-      const lIdx = state.selectedLeft;
-      const lSlot = state.board[lIdx];
-      const rSlot = state.board[rIdx];
-      if (!lSlot || !rSlot) return state;
 
-      const isCorrect = lSlot.pairId === rSlot.pairId;
+      const lIdx = state.selectedLeft;
+      const rIdx = action.index;
+
+      const leftCard = state.leftCards[lIdx];
+      const rightCard = state.rightCards[rIdx];
+
+      if (leftCard.status === 'matched' || rightCard.status === 'matched') return state;
+
+      const isCorrect = leftCard.pairId === rightCard.pairId;
 
       if (isCorrect) {
-        // Ẩn 2 ô vừa nối đúng → board slot = null
-        const board = state.board.map((s, i) =>
-          i === lIdx ? null : i === rIdx ? null : s
-        );
-        // Đẩy 2 vị trí vào pool trống
-        const newEmptyPool = [...state.emptyPool, lIdx, rIdx];
-        const newPendingCount = state.pendingCount + 1;
+        const leftCards = updateCard(state.leftCards, lIdx, 'correct');
+        const rightCards = updateCard(state.rightCards, rIdx, 'correct');
 
         return {
           ...state,
-          board,
+          leftCards,
+          rightCards,
           selectedLeft: null,
           selectedRight: null,
           matchedCount: state.matchedCount + 1,
           setMatchedCount: state.setMatchedCount + 1,
           learnedCount: state.learnedCount + 1,
-          emptyPool: newEmptyPool,
-          pendingCount: newPendingCount,
+          emptyPool: [...state.emptyPool, lIdx, rIdx],
+          pendingCount: state.pendingCount + 1,
           lockInteraction: true,
         };
       } else {
-        // Sai: highlight 2 ô đỏ → reset về idle sau animation
-        const board = state.board.map((s, i) => {
-          if (i === lIdx && s) return { ...s, leftStatus: 'wrong' as CardStatus };
-          if (i === rIdx && s) return { ...s, rightStatus: 'wrong' as CardStatus };
-          return s;
-        });
+        const leftCards = updateCard(state.leftCards, lIdx, 'wrong');
+        const rightCards = updateCard(state.rightCards, rIdx, 'wrong');
         return {
           ...state,
-          board,
+          leftCards,
+          rightCards,
           selectedLeft: null,
           selectedRight: null,
           lockInteraction: true,
@@ -166,24 +158,33 @@ function reducer(state: State, action: Action): State {
     case 'ANIMATION_DONE': {
       if (!state.lockInteraction) return state;
 
-      let { board, emptyPool, pendingCount } = state;
+      let { leftCards, rightCards, emptyPool, pendingCount, setQueue } = state;
 
-      // Đủ 3 cặp đúng → refill ngay 1 cặp mới vào 1 vị trí ngẫu nhiên trong pool
-      if (pendingCount >= REFILL_THRESHOLD && state.setQueue.length > 0) {
-        const newPair = state.setQueue[0];
-        const newQueue = state.setQueue.slice(1);
+      // Đủ 3 cặp đúng → refill 1 từ mới vào 1 vị trí trống ngẫu nhiên
+      if (pendingCount >= REFILL_THRESHOLD && setQueue.length > 0) {
+        const newWord = setQueue[0];
+        const newQueue = setQueue.slice(1);
 
-        // Chọn ngẫu nhiên 1 vị trí trống từ pool để fill
         const shuffledPool = shuffleArray(emptyPool);
-        const fillPos = shuffledPool[0];
+        const fillIdx = shuffledPool[0];
         const remainingPool = shuffledPool.slice(1);
 
-        const newBoard = [...board];
-        newBoard[fillPos] = makeSlot(newPair);
+        // Tách side từ index gốc: index < BOARD_SIZE → trái, >= BOARD_SIZE → phải
+        const isLeft = fillIdx < BOARD_SIZE;
+        const cardIdx = fillIdx % BOARD_SIZE;
+
+        if (isLeft) {
+          leftCards = updateCard(leftCards, cardIdx, 'idle');
+          leftCards[cardIdx] = makeEntry(newWord);
+        } else {
+          rightCards = updateCard(rightCards, cardIdx, 'idle');
+          rightCards[cardIdx] = makeEntry(newWord);
+        }
 
         return {
           ...state,
-          board: newBoard,
+          leftCards,
+          rightCards,
           setQueue: newQueue,
           emptyPool: remainingPool,
           pendingCount: pendingCount - 1,
@@ -191,11 +192,13 @@ function reducer(state: State, action: Action): State {
         };
       }
 
-      // Chưa đủ 3 lần đúng: chỉ reset animation, giữ nguyên ô trống
-      // (các slot đã bị set về null trong SELECT_RIGHT — không cần reset)
+      // Chưa đủ 3 lần: reset trạng thái selected/wrong → idle
+      leftCards = updateCard(leftCards, -1, 'idle');
+      rightCards = updateCard(rightCards, -1, 'idle');
       return {
         ...state,
-        pendingCount,
+        leftCards,
+        rightCards,
         lockInteraction: false,
       };
     }

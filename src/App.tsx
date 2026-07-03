@@ -83,7 +83,8 @@ export default function App() {
               </button>
             </div>
             <Board
-              board={game.board}
+              leftCards={game.leftCards}
+              rightCards={game.rightCards}
               onLeftClick={game.handleLeftClick}
               onRightClick={game.handleRightClick}
               lockInteraction={game.lockInteraction}

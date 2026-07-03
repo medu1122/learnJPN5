@@ -1,21 +1,30 @@
 import { memo, useMemo } from 'react';
-import type { BoardSlot } from '../types';
+import type { CardEntry, CardStatus } from '../types';
 
 interface WordCardProps {
   pairId: number;
   type: 'left' | 'right';
-  word: BoardSlot['leftWord'];
-  status: BoardSlot['leftStatus'];
+  word: CardEntry['word'];
+  status: CardStatus;
   onClick: () => void;
 }
 
 function WordCardComponent({ pairId, type, word, status, onClick }: WordCardProps) {
-  const showFurigana = type === 'left' && word.kanji !== word.reading;
+  const showFurigana = type === 'left' && word.kanji !== word.reading && word.kanji !== '';
 
   const className = useMemo(() => {
     const base = 'word-card';
     return `${base} word-card--${type} word-card--${status}`;
   }, [type, status]);
+
+  if (status === 'matched') {
+    return (
+      <div
+        className="word-card word-card--empty"
+        aria-label={`matched ${type} card ${pairId}`}
+      />
+    );
+  }
 
   return (
     <button
@@ -24,9 +33,15 @@ function WordCardComponent({ pairId, type, word, status, onClick }: WordCardProp
       aria-label={`${type} card ${pairId}`}
       data-status={status}
     >
-      {type === 'left' && <span className="word-card__kanji">{word.kanji}</span>}
-      {type === 'left' && showFurigana && <span className="word-card__furigana">{word.reading}</span>}
-      {type === 'right' && <span className="word-card__meaning">{word.meaning}</span>}
+      {type === 'left' && word.kanji !== '' && (
+        <span className="word-card__kanji">{word.kanji}</span>
+      )}
+      {type === 'left' && showFurigana && (
+        <span className="word-card__furigana">{word.reading}</span>
+      )}
+      {type === 'right' && word.meaning !== '' && (
+        <span className="word-card__meaning">{word.meaning}</span>
+      )}
     </button>
   );
 }

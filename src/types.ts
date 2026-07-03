@@ -8,20 +8,19 @@ export interface VocabWord {
 
 export type CardStatus = 'idle' | 'selected' | 'correct' | 'wrong' | 'matched';
 
-export interface BoardSlot {
+export interface CardEntry {
   pairId: number;
-  leftWord: VocabWord;
-  rightWord: VocabWord;
-  leftStatus: CardStatus;
-  rightStatus: CardStatus;
-  leftKey: number;
-  rightKey: number;
+  word: VocabWord;
+  status: CardStatus;
+  key: number;
 }
 
 export interface GameState {
-  board: (BoardSlot | null)[];
+  leftCards: CardEntry[];
+  rightCards: CardEntry[];
   setQueue: VocabWord[];
-  pendingEmptySlot: number | null;
+  emptyPool: number[];
+  pendingCount: number;
   selectedLeft: number | null;
   selectedRight: number | null;
   matchedCount: number;
