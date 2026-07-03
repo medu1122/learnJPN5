@@ -6,7 +6,7 @@ import { shuffleArray } from '../utils/shuffle';
 interface State {
   board: (BoardSlot | null)[];
   setQueue: VocabWord[];
-  pendingEmptySlot: number | null;
+  emptySlots: number[];
   selectedLeft: number | null;
   selectedRight: number | null;
   matchedCount: number;
@@ -26,11 +26,11 @@ type Action =
 let keyCounter = 0;
 const nextKey = () => ++keyCounter;
 
-function makeSlot(pair: VocabWord): BoardSlot {
+function makeSlot(leftWord: VocabWord, rightWord: VocabWord): BoardSlot {
   return {
-    pairId: pair.id,
-    leftWord: pair,
-    rightWord: pair,
+    pairId: leftWord.id,
+    leftWord,
+    rightWord,
     leftStatus: 'idle',
     rightStatus: 'idle',
     leftKey: nextKey(),
@@ -38,16 +38,14 @@ function makeSlot(pair: VocabWord): BoardSlot {
   };
 }
 
+/**
+ * Shuffle cột trái & phải ĐỘC LẬP.
+ * leftOrder và rightOrder là 2 thứ tự hoàn toàn khác nhau.
+ */
 function buildBoard(pairs: VocabWord[]): (BoardSlot | null)[] {
   const leftOrder = shuffleArray(pairs);
   const rightOrder = shuffleArray(pairs);
-  return pairs.map((pair, i) => ({
-    ...makeSlot(pair),
-    leftWord: leftOrder[i],
-    rightWord: rightOrder[i],
-    leftKey: nextKey(),
-    rightKey: nextKey(),
-  }));
+  return leftOrder.map((lw, i) => makeSlot(lw, rightOrder[i]));
 }
 
 function poolFromCategories(categories: string[]): VocabWord[] {
@@ -62,7 +60,7 @@ function startSet(categories: string[]): State {
   return {
     board: buildBoard(boardPairs),
     setQueue: setQueue.slice(BOARD_SIZE),
-    pendingEmptySlot: null,
+    emptySlots: [],
     selectedLeft: null,
     selectedRight: null,
     matchedCount: 0,
@@ -95,8 +93,9 @@ function reducer(state: State, action: Action): State {
         return { ...state, selectedLeft: null };
       }
 
-      const next: BoardSlot = { ...slot, leftStatus: 'selected' };
-      const board = state.board.map((s, i) => (i === idx ? next : s));
+      const board = state.board.map((s, i) =>
+        i === idx && s ? { ...s, leftStatus: 'selected' as CardStatus } : s
+      );
       return { ...state, selectedLeft: idx, board };
     }
 
@@ -108,16 +107,10 @@ function reducer(state: State, action: Action): State {
       const rSlot = state.board[rIdx];
       if (!lSlot || !rSlot) return state;
 
-      const board1 = state.board.map((s, i) => {
-        if (i === lIdx && s) return setCardStatus(s, 'left', 'selected');
-        if (i === rIdx && s) return setCardStatus(s, 'right', 'selected');
-        return s;
-      });
-
       const isCorrect = lSlot.pairId === rSlot.pairId;
 
       if (isCorrect) {
-        const board2 = board1.map((s, i) => {
+        const board = state.board.map((s, i) => {
           if (i === lIdx && s) {
             const tmp = setCardStatus(s, 'left', 'correct');
             return setCardStatus(tmp, 'right', 'correct');
@@ -125,28 +118,28 @@ function reducer(state: State, action: Action): State {
           if (i === rIdx && s) return setCardStatus(s, 'right', 'correct');
           return s;
         });
-        const nextPending =
-          state.pendingEmptySlot === null ? rIdx : state.pendingEmptySlot;
+
+        const newEmptySlots = [...state.emptySlots, lIdx, rIdx];
         return {
           ...state,
-          board: board2,
+          board,
           selectedLeft: null,
           selectedRight: null,
           matchedCount: state.matchedCount + 1,
           setMatchedCount: state.setMatchedCount + 1,
           learnedCount: state.learnedCount + 1,
-          pendingEmptySlot: nextPending,
+          emptySlots: newEmptySlots,
           lockInteraction: true,
         };
       } else {
-        const board2 = board1.map((s, i) => {
+        const board = state.board.map((s, i) => {
           if (i === lIdx && s) return setCardStatus(s, 'left', 'wrong');
           if (i === rIdx && s) return setCardStatus(s, 'right', 'wrong');
           return s;
         });
         return {
           ...state,
-          board: board2,
+          board,
           selectedLeft: null,
           selectedRight: null,
           lockInteraction: true,
@@ -157,35 +150,48 @@ function reducer(state: State, action: Action): State {
     case 'ANIMATION_DONE': {
       if (!state.lockInteraction) return state;
 
-      let { board, pendingEmptySlot, setMatchedCount } = state;
+      let { board, emptySlots } = state;
 
-      if (state.pendingEmptySlot !== null) {
-        const pending = state.pendingEmptySlot;
-        const emptyNow = board.findIndex(
-          (s, i) => s === null && i !== pending
-        );
-        const slotsToFill: number[] = emptyNow !== -1
-          ? [pending, emptyNow]
-          : [pending];
-        const newPairs = state.setQueue.slice(0, slotsToFill.length);
+      // Khi đã đúng đủ 3 lần (6 ô trống) → fill tất cả cùng lúc
+      if (emptySlots.length === 6 && state.setQueue.length > 0) {
+        const pairsToFill = state.setQueue.slice(0, 6);
+        const newQueue = state.setQueue.slice(6);
 
-        if (newPairs.length > 0) {
-          const newBoard = [...board];
-          newPairs.forEach((pair, i) => {
-            const pos = slotsToFill[i];
-            newBoard[pos] = makeSlot(pair);
-          });
-          board = newBoard;
-          setMatchedCount = 0;
-        }
-        pendingEmptySlot = null;
+        // Shuffle vị trí fill — hoàn toàn ngẫu nhiên
+        const shuffledPositions = shuffleArray(emptySlots);
+        // Shuffle thứ tự cặp mới — không theo thứ tự cũ
+        const shuffledPairs = shuffleArray(pairsToFill);
+
+        const newBoard = [...board];
+        shuffledPairs.forEach((pair, i) => {
+          newBoard[shuffledPositions[i]] = makeSlot(pair, pair);
+        });
+
+        return {
+          ...state,
+          board: newBoard,
+          setQueue: newQueue,
+          emptySlots: [],
+          lockInteraction: false,
+        };
       }
 
+      // Chưa đủ 3 lần đúng → chỉ reset animation, giữ nguyên ô trống
       const boardReset = board.map((s) =>
-        s ? { ...s, leftStatus: 'idle' as CardStatus, rightStatus: 'idle' as CardStatus } : s
+        s
+          ? {
+              ...s,
+              leftStatus: 'idle' as CardStatus,
+              rightStatus: 'idle' as CardStatus,
+            }
+          : s
       );
 
-      return { ...state, board: boardReset, pendingEmptySlot, setMatchedCount, lockInteraction: false };
+      return {
+        ...state,
+        board: boardReset,
+        lockInteraction: false,
+      };
     }
 
     case 'START_NEW_SET': {
@@ -198,7 +204,7 @@ function reducer(state: State, action: Action): State {
 }
 
 export function useMatchingGame() {
-  const [state, dispatch] = useReducer(reducer, [], () => startSet([]));
+  const [state, dispatch] = useReducer(reducer, undefined, () => startSet([]));
   const animTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
