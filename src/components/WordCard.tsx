@@ -24,8 +24,8 @@ function WordCardComponent({ pairId, type, word, status, onClick }: WordCardProp
       aria-label={`${type} card ${pairId}`}
       data-status={status}
     >
-      <span className="word-card__kanji">{word.kanji}</span>
-      {showFurigana && <span className="word-card__furigana">{word.reading}</span>}
+      {type === 'left' && <span className="word-card__kanji">{word.kanji}</span>}
+      {type === 'left' && showFurigana && <span className="word-card__furigana">{word.reading}</span>}
       {type === 'right' && <span className="word-card__meaning">{word.meaning}</span>}
     </button>
   );
