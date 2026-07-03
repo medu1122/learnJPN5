@@ -6,7 +6,8 @@ import { shuffleArray } from '../utils/shuffle';
 interface State {
   board: (BoardSlot | null)[];
   setQueue: VocabWord[];
-  emptySlots: number[];
+  emptyPool: number[];
+  pendingCount: number;
   selectedLeft: number | null;
   selectedRight: number | null;
   matchedCount: number;
@@ -23,14 +24,16 @@ type Action =
   | { type: 'ANIMATION_DONE' }
   | { type: 'START_NEW_SET'; categories: string[] };
 
+const REFILL_THRESHOLD = 3;
+
 let keyCounter = 0;
 const nextKey = () => ++keyCounter;
 
-function makeSlot(leftWord: VocabWord, rightWord: VocabWord): BoardSlot {
+function makeSlot(pair: VocabWord): BoardSlot {
   return {
-    pairId: leftWord.id,
-    leftWord,
-    rightWord,
+    pairId: pair.id,
+    leftWord: pair,
+    rightWord: pair,
     leftStatus: 'idle',
     rightStatus: 'idle',
     leftKey: nextKey(),
@@ -39,13 +42,34 @@ function makeSlot(leftWord: VocabWord, rightWord: VocabWord): BoardSlot {
 }
 
 /**
- * Shuffle cột trái & phải ĐỘC LẬP.
- * leftOrder và rightOrder là 2 thứ tự hoàn toàn khác nhau.
+ * Shuffle 2 cột ĐỘC LẬP.
+ * Lặp shuffle Fisher-Yates cho rightPairIds cho đến khi không còn
+ * cặp nào trùng hàng (leftPairIds[i] !== rightPairIds[i] với mọi i).
  */
 function buildBoard(pairs: VocabWord[]): (BoardSlot | null)[] {
-  const leftOrder = shuffleArray(pairs);
-  const rightOrder = shuffleArray(pairs);
-  return leftOrder.map((lw, i) => makeSlot(lw, rightOrder[i]));
+  const pairMap = new Map<number, VocabWord>(pairs.map((p) => [p.id, p]));
+
+  const leftPairIds = shuffleArray(pairs).map((p) => p.id);
+  let rightPairIds = shuffleArray(pairs).map((p) => p.id);
+
+  // Thử shuffle cho đến khi không còn trùng hàng
+  let attempts = 0;
+  while (attempts < 100) {
+    const hasMatch = leftPairIds.some((id, i) => id === rightPairIds[i]);
+    if (!hasMatch) break;
+    rightPairIds = shuffleArray(pairs).map((p) => p.id);
+    attempts++;
+  }
+
+  return leftPairIds.map((pairId, i) => ({
+    pairId,
+    leftWord: pairMap.get(pairId)!,
+    rightWord: pairMap.get(rightPairIds[i])!,
+    leftStatus: 'idle' as CardStatus,
+    rightStatus: 'idle' as CardStatus,
+    leftKey: nextKey(),
+    rightKey: nextKey(),
+  }));
 }
 
 function poolFromCategories(categories: string[]): VocabWord[] {
@@ -60,7 +84,8 @@ function startSet(categories: string[]): State {
   return {
     board: buildBoard(boardPairs),
     setQueue: setQueue.slice(BOARD_SIZE),
-    emptySlots: [],
+    emptyPool: [],
+    pendingCount: 0,
     selectedLeft: null,
     selectedRight: null,
     matchedCount: 0,
@@ -70,15 +95,6 @@ function startSet(categories: string[]): State {
     activeCategories: categories,
     showFilter: false,
   };
-}
-
-function setCardStatus(
-  slot: BoardSlot,
-  side: 'left' | 'right',
-  status: CardStatus
-): BoardSlot {
-  if (side === 'left') return { ...slot, leftStatus: status };
-  return { ...slot, rightStatus: status };
 }
 
 function reducer(state: State, action: Action): State {
@@ -110,16 +126,14 @@ function reducer(state: State, action: Action): State {
       const isCorrect = lSlot.pairId === rSlot.pairId;
 
       if (isCorrect) {
-        const board = state.board.map((s, i) => {
-          if (i === lIdx && s) {
-            const tmp = setCardStatus(s, 'left', 'correct');
-            return setCardStatus(tmp, 'right', 'correct');
-          }
-          if (i === rIdx && s) return setCardStatus(s, 'right', 'correct');
-          return s;
-        });
+        // Ẩn 2 ô vừa nối đúng → board slot = null
+        const board = state.board.map((s, i) =>
+          i === lIdx ? null : i === rIdx ? null : s
+        );
+        // Đẩy 2 vị trí vào pool trống
+        const newEmptyPool = [...state.emptyPool, lIdx, rIdx];
+        const newPendingCount = state.pendingCount + 1;
 
-        const newEmptySlots = [...state.emptySlots, lIdx, rIdx];
         return {
           ...state,
           board,
@@ -128,13 +142,15 @@ function reducer(state: State, action: Action): State {
           matchedCount: state.matchedCount + 1,
           setMatchedCount: state.setMatchedCount + 1,
           learnedCount: state.learnedCount + 1,
-          emptySlots: newEmptySlots,
+          emptyPool: newEmptyPool,
+          pendingCount: newPendingCount,
           lockInteraction: true,
         };
       } else {
+        // Sai: highlight 2 ô đỏ → reset về idle sau animation
         const board = state.board.map((s, i) => {
-          if (i === lIdx && s) return setCardStatus(s, 'left', 'wrong');
-          if (i === rIdx && s) return setCardStatus(s, 'right', 'wrong');
+          if (i === lIdx && s) return { ...s, leftStatus: 'wrong' as CardStatus };
+          if (i === rIdx && s) return { ...s, rightStatus: 'wrong' as CardStatus };
           return s;
         });
         return {
@@ -150,46 +166,36 @@ function reducer(state: State, action: Action): State {
     case 'ANIMATION_DONE': {
       if (!state.lockInteraction) return state;
 
-      let { board, emptySlots } = state;
+      let { board, emptyPool, pendingCount } = state;
 
-      // Khi đã đúng đủ 3 lần (6 ô trống) → fill tất cả cùng lúc
-      if (emptySlots.length === 6 && state.setQueue.length > 0) {
-        const pairsToFill = state.setQueue.slice(0, 6);
-        const newQueue = state.setQueue.slice(6);
+      // Đủ 3 cặp đúng → refill ngay 1 cặp mới vào 1 vị trí ngẫu nhiên trong pool
+      if (pendingCount >= REFILL_THRESHOLD && state.setQueue.length > 0) {
+        const newPair = state.setQueue[0];
+        const newQueue = state.setQueue.slice(1);
 
-        // Shuffle vị trí fill — hoàn toàn ngẫu nhiên
-        const shuffledPositions = shuffleArray(emptySlots);
-        // Shuffle thứ tự cặp mới — không theo thứ tự cũ
-        const shuffledPairs = shuffleArray(pairsToFill);
+        // Chọn ngẫu nhiên 1 vị trí trống từ pool để fill
+        const shuffledPool = shuffleArray(emptyPool);
+        const fillPos = shuffledPool[0];
+        const remainingPool = shuffledPool.slice(1);
 
         const newBoard = [...board];
-        shuffledPairs.forEach((pair, i) => {
-          newBoard[shuffledPositions[i]] = makeSlot(pair, pair);
-        });
+        newBoard[fillPos] = makeSlot(newPair);
 
         return {
           ...state,
           board: newBoard,
           setQueue: newQueue,
-          emptySlots: [],
+          emptyPool: remainingPool,
+          pendingCount: pendingCount - 1,
           lockInteraction: false,
         };
       }
 
-      // Chưa đủ 3 lần đúng → chỉ reset animation, giữ nguyên ô trống
-      const boardReset = board.map((s) =>
-        s
-          ? {
-              ...s,
-              leftStatus: 'idle' as CardStatus,
-              rightStatus: 'idle' as CardStatus,
-            }
-          : s
-      );
-
+      // Chưa đủ 3 lần đúng: chỉ reset animation, giữ nguyên ô trống
+      // (các slot đã bị set về null trong SELECT_RIGHT — không cần reset)
       return {
         ...state,
-        board: boardReset,
+        pendingCount,
         lockInteraction: false,
       };
     }
